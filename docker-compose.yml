@@ -2,7 +2,7 @@ version: '2'
 services:
 
   strapi:
-    build: .
+    image: strapi/strapi:latest
     depends_on:
     - mongo-strapi
     image: wulpers-strapi
@@ -10,9 +10,27 @@ services:
     - "1337:1337"
     expose:
     - "1337"
-    # command: sh 
     volumes:
-    - ./project:/srv/app
+    - ./strapi:/srv/app
+    networks:
+    - strapi
+    env_file:
+    - .env
+
+  front:
+    image: node:latest
+    depends_on:
+    - strapi
+    - mongo-strapi
+    ports:
+    - "3000:3000"
+    expose:
+    - "3000"
+    working_dir: /var/app/
+    volumes:
+    - ./frontend/:/var/app
+    command: npm install
+    command: npm run dev
     networks:
     - strapi
     env_file:
@@ -22,17 +40,31 @@ services:
     image: mongo:latest
     volumes:
     - ./mongodb:/data/db
-    - ./mongodb_config:/data/configdb
     ports: 
     - "27018:27017"
     expose:
     - "27017"
     networks:
     - strapi
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 1234
-      MONGO_INITDB_DATABASE: strapi
+    env_file:
+    - .env
+
+  nginx:
+    image: nginx:latest
+    depends_on:
+    - mongo-strapi
+    - strapi
+    - front
+    volumes:
+    - ./nginx:/etc/nginx
+    ports: 
+    - "8000:80"
+    - "8080:8080"
+    expose:
+    - "80"
+    - "8080"
+    networks:
+    - strapi
 
 networks:
   strapi:

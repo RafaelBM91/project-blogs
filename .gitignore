@@ -114,3 +114,4 @@ build
 .env
 mongodb/**
 mongodb_config/**
+.next

@@ -1,0 +1,24 @@
+module.exports = {
+  resolver: {
+    Query: {
+      posts: {
+        description: 'posts graphql',
+        resolver: {
+          handler: 'Post.find'
+        },
+        policies: [
+          'global.isAuthenticated'
+        ]
+      },
+      post: {
+        description: 'post graphql',
+        resolver: {
+          handler: 'Post.findOne'
+        },
+        policies: [
+          'global.isAuthenticated'
+        ]
+      }
+    }
+  }
+};
