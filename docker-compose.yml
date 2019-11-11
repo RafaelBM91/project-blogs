@@ -28,8 +28,7 @@ services:
     working_dir: /var/app/
     volumes:
     - ./frontend/:/var/app
-    command: npm install
-    command: npm run dev
+    command: npm start
     networks:
     - strapi
     env_file:
