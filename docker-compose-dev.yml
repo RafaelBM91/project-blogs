@@ -48,6 +48,23 @@ services:
     env_file:
     - .env
 
+  nginx:
+    image: nginx:latest
+    depends_on:
+    - mongo-strapi
+    - strapi
+    - front
+    volumes:
+    - ./nginx:/etc/nginx
+    ports: 
+    - "8000:80"
+    - "8080:8080"
+    expose:
+    - "80"
+    - "8080"
+    networks:
+    - strapi
+
 networks:
   strapi:
     driver: bridge
