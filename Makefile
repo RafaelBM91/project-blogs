@@ -10,6 +10,7 @@ build-cache-serv:
 
 up-debug:
 	@echo '***UP-DEBUG***'
+	@compile-front
 	docker-compose -f docker-compose.yml up --no-build
 
 down:
@@ -22,6 +23,7 @@ logs:
 
 up:
 	@echo '***UP***'
+	@compile-front
 	docker-compose up --no-build -d
 
 stop:
@@ -36,3 +38,7 @@ dependencies:
 	@echo '***DEPENDENCIES***'
 	docker run -it -v ${PWD}/frontend:/var/app -w /var/app node:latest npm install
 	docker run -it -v ${PWD}/strapi:/srv/app -w /srv/app node:latest npm install
+
+compile-front:
+	@echo '***COMPILE-FRONT***'
+	docker run -it -v ${PWD}/frontend:/var/app -w /var/app node:latest npm run build
