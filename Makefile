@@ -10,7 +10,7 @@ build-cache-serv:
 
 up-debug:
 	@echo '***UP-DEBUG***'
-	@compile-front
+	compile-front
 	docker-compose -f docker-compose.yml up --no-build
 
 down:
@@ -23,7 +23,7 @@ logs:
 
 up:
 	@echo '***UP***'
-	@compile-front
+	compile-front
 	docker-compose up --no-build -d
 
 stop:
