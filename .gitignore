@@ -112,6 +112,8 @@ exports
 build
 
 .env
+.env.local
 mongodb/**
 mongodb_config/**
 .next
+strapi/public/uploads/**

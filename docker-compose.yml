@@ -3,8 +3,6 @@ services:
 
   strapi:
     image: strapi/strapi:latest
-    depends_on:
-    - mongo-strapi
     ports:
     - "1337:1337"
     expose:
@@ -20,7 +18,6 @@ services:
     image: node:latest
     depends_on:
     - strapi
-    - mongo-strapi
     ports:
     - "3000:3000"
     expose:
@@ -28,20 +25,26 @@ services:
     working_dir: /var/app/
     volumes:
     - ./frontend/:/var/app
-    command: npm start
+    command: npm install
+    command: npm run dev
     networks:
     - strapi
     env_file:
     - .env
 
-  mongo-strapi:
-    image: mongo:latest
+  nginx:
+    image: nginx:latest
+    depends_on:
+    - strapi
+    - front
     volumes:
-    - ./mongodb:/data/db
+    - ./nginx:/etc/nginx
     ports: 
-    - "27018:27017"
+    - ${PORT_FRONT}
+    - ${PORT_STRAPI}
     expose:
-    - "27017"
+    - ${PORT_FRONT_EXPOSE}
+    - ${PORT_STRAPI_EXPOSE}
     networks:
     - strapi
     env_file:

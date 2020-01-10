@@ -57,13 +57,15 @@ services:
     volumes:
     - ./nginx:/etc/nginx
     ports: 
-    - "8000:80"
-    - "8080:8080"
+    - ${PORT_FRONT}
+    - ${PORT_STRAPI}
     expose:
-    - "80"
-    - "8080"
+    - ${PORT_FRONT_EXPOSE}
+    - ${PORT_STRAPI_EXPOSE}
     networks:
     - strapi
+    env_file:
+    - .env
 
 networks:
   strapi:
