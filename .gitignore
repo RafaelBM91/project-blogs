@@ -112,8 +112,9 @@ exports
 build
 
 .env
-.env.local
+.keys/
 mongodb/**
 mongodb_config/**
 .next
 strapi/public/uploads/**
+postgres/

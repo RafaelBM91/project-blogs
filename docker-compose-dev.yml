@@ -4,7 +4,7 @@ services:
   strapi:
     image: strapi/strapi:latest
     depends_on:
-    - mongo-strapi
+    - postgres
     ports:
     - "1337:1337"
     expose:
@@ -20,7 +20,7 @@ services:
     image: node:latest
     depends_on:
     - strapi
-    - mongo-strapi
+    - postgres
     ports:
     - "3000:3000"
     expose:
@@ -35,14 +35,12 @@ services:
     env_file:
     - .env
 
-  mongo-strapi:
-    image: mongo:latest
+  postgres:
+    image: postgres:latest
     volumes:
-    - ./mongodb:/data/db
-    ports: 
-    - "27018:27017"
-    expose:
-    - "27017"
+    - ./postgres:/var/lib/postgresql/data
+    ports:
+    - "5433:5432"
     networks:
     - strapi
     env_file:
@@ -51,7 +49,7 @@ services:
   nginx:
     image: nginx:latest
     depends_on:
-    - mongo-strapi
+    - postgres
     - strapi
     - front
     volumes:

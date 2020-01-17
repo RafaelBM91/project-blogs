@@ -2,23 +2,23 @@ include makefile-dev.mk
 
 build:
 	@echo '***BUILD***'
-	docker-compose build --force-rm --no-cache
+	docker-compose -f docker-compose.yml build --force-rm --no-cache
 
 up:
 	@echo '***UP***'
-	docker-compose up --no-build -d
+	docker-compose -f docker-compose.yml up --no-build -d
 
 down:
 	@echo '***DOWN***'
-	docker-compose down
+	docker-compose -f docker-compose.yml down
 	
 logs:
 	@echo '***LOGS***'
-	docker-compose -f docker-compose.yml logs
+	docker-compose -f docker-compose.yml logs --tail="all" --follow
 
 restart:
 	@echo '***RESTART***'
-	docker-compose restart
+	docker-compose -f docker-compose.yml restart
 
 dependencies:
 	@echo '***DEPENDENCIES***'

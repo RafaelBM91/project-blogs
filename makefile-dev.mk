@@ -8,7 +8,7 @@ build-cache-serv:
 
 up-it-dev:
 	@echo '***UP-IT-DEV***'
-	docker-compose -f docker-compose-dev.yml up --no-build
+	docker-compose -f docker-compose-dev.yml up --no-build --force-recreate
 
 logs-dev:
 	@echo '***LOGS-DEV***'
