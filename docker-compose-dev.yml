@@ -4,7 +4,7 @@ services:
   strapi:
     image: strapi/strapi:latest
     depends_on:
-    - postgres
+    - database
     ports:
     - "1337:1337"
     expose:
@@ -20,7 +20,7 @@ services:
     image: node:latest
     depends_on:
     - strapi
-    - postgres
+    - database
     ports:
     - "3000:3000"
     expose:
@@ -35,7 +35,7 @@ services:
     env_file:
     - .env
 
-  postgres:
+  database:
     image: postgres:latest
     volumes:
     - ./postgres:/var/lib/postgresql/data
@@ -43,13 +43,17 @@ services:
     - "5433:5432"
     networks:
     - strapi
+    # environment:
+    #   POSTGRES_USER:     postgres
+    #   POSTGRES_PASSWORD: 1234
+    #   POSTGRES_DB:       postgres
     env_file:
     - .env
 
   nginx:
     image: nginx:latest
     depends_on:
-    - postgres
+    - database
     - strapi
     - front
     volumes:

@@ -118,3 +118,4 @@ mongodb_config/**
 .next
 strapi/public/uploads/**
 postgres/
+.records/**
