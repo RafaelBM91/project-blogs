@@ -25,14 +25,6 @@
       }
     },
     {
-      "method": "GET",
-      "path": "/posts/url/:url",
-      "handler": "Post.findUrl",
-      "config": {
-        "policies": []
-      }
-    },
-    {
       "method": "POST",
       "path": "/posts",
       "handler": "Post.create",

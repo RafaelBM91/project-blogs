@@ -8,7 +8,10 @@ module.exports = {
     Query: {
       postByUrl: {
         description: 'Find by Url String unique',
-        resolver: 'Post.findUrl'
+        resolver: {
+          handler: 'Post.findUrl'
+        },
+        policies: []
       },
     },
     Mutation: {}

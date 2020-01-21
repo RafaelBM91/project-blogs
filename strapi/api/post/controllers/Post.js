@@ -7,7 +7,6 @@
 
 module.exports = {
   findUrl: async (ctx) => {
-    let post = await strapi.services.post.findUrl(ctx.params);
-    ctx.send(post);
+    return await strapi.services.post.findUrl(ctx.params);
   },
 };

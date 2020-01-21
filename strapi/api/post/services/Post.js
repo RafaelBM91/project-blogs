@@ -1,6 +1,6 @@
 'use strict';
 
-const { convertRestQueryParams } = require('strapi-utils');
+// const { convertRestQueryParams } = require('strapi-utils');
 
 /**
  * Read the documentation (https://strapi.io/documentation/3.0.0-beta.x/guides/services.html#core-services)
@@ -9,7 +9,9 @@ const { convertRestQueryParams } = require('strapi-utils');
 
 module.exports = {
   findUrl(params) {
-    const convertedParams = convertRestQueryParams(params);
-    return strapi.query('post').findOne(convertedParams.where);
+    return strapi.query('post').findOne({
+      url:    params.url || params._url,
+      public: true
+    });
   }
 };
