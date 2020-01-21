@@ -1,0 +1,16 @@
+module.exports = {
+  definition: ``,
+  query: `
+    postByUrl(url: String!): Post
+  `,
+  mutation: ``,
+  resolver: {
+    Query: {
+      postByUrl: {
+        description: 'Find by Url String unique',
+        resolver: 'Post.findUrl'
+      },
+    },
+    Mutation: {}
+  }
+};

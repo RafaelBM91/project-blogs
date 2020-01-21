@@ -5,4 +5,9 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  findUrl: async (ctx) => {
+    let post = await strapi.services.post.findUrl(ctx.params);
+    ctx.send(post);
+  },
+};
