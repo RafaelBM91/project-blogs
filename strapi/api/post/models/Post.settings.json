@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "post",
+  "info": {
+    "name": "post",
+    "description": "blog content"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "titulo": {
+      "required": true,
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "description": {
+      "required": true,
+      "type": "richtext"
+    },
+    "descripcion": {
+      "required": true,
+      "type": "richtext"
+    },
+    "public": {
+      "type": "boolean"
+    },
+    "url": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "palabrasclaves": {
+      "type": "text"
+    }
+  }
+}
