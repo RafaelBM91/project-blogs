@@ -7,7 +7,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
     "comment": ""
   },
   "attributes": {
@@ -25,14 +28,6 @@
       "plugin": "upload",
       "required": true
     },
-    "description": {
-      "required": true,
-      "type": "richtext"
-    },
-    "descripcion": {
-      "required": true,
-      "type": "richtext"
-    },
     "public": {
       "type": "boolean"
     },
@@ -46,6 +41,32 @@
     },
     "palabrasclaves": {
       "type": "text"
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "article": {
+      "required": true,
+      "type": "richtext"
+    },
+    "articulo": {
+      "required": true,
+      "type": "richtext"
+    },
+    "tages": {
+      "default": "tag",
+      "required": true,
+      "type": "string"
+    },
+    "tagen": {
+      "required": true,
+      "default": "tagen",
+      "type": "string"
     }
   }
 }
