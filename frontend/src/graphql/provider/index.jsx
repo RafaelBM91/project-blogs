@@ -5,11 +5,13 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { createUploadLink } from "apollo-upload-client";
 import { ApolloProvider } from "@apollo/react-hooks";
 
+const GRAPHQL = process.env.GRAPHQL_URL || "http://54.172.107.116/graphql";
+
 const createApolloClient = (cache = {}) =>
   new ApolloClient({
     ssrMode: typeof window !== "undefined",
     cache: new InMemoryCache().restore(cache),
-    link: createUploadLink({ uri: "http://54.172.107.116/graphql" })
+    link: createUploadLink({ uri: GRAPHQL })
   });
 
 export default Component => {
