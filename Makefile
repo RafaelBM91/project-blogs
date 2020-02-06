@@ -11,7 +11,7 @@ up:
 down:
 	@echo '***DOWN***'
 	docker-compose -f docker-compose.yml down
-	
+
 logs:
 	@echo '***LOGS***'
 	docker-compose -f docker-compose.yml logs --tail="all" --follow
