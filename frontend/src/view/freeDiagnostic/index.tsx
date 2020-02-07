@@ -45,7 +45,7 @@ const FreeDiagnostic: React.SFC<FreeDiagnosticProps> = () => {
               <h5>
                 <strong>{freeDiagnostic.span1}</strong>
                 {freeDiagnostic.text1}
-                <br />
+                {/* <br /> */}
                 {freeDiagnostic.text2}
               </h5>
             </TitleForm>

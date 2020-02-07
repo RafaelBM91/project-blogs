@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { MQ } from "../../config/media";
 //Mango-Library
 import InputContainer1 from "./input";
 import InputContainer2 from "./input2";
@@ -10,11 +10,15 @@ const FormSC = styled.form`
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  width: ${props => props.width};
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 3em;
+  padding: 20px 5px;
+  width: 100%;
+  @media ${MQ.sm} {
+    width: ${props => props.width};
+    padding: 20px 3em;
+  }
 `;
 
 function Form({ children, width, onSubmit }) {

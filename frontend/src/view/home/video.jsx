@@ -1,5 +1,6 @@
 import * as React from "react";
 import YouTube from "react-youtube";
+import Vimeo from "@u-wave/react-vimeo";
 import { LanguageContext } from "../../context/language";
 //Mango-Ly
 import { SectionML } from "../../mangoLy";
@@ -12,16 +13,19 @@ import {
 //Image
 import iconCheck from "../img/video/check.svg";
 import bgNormal from "../img/bgNormal.svg";
-export interface VideoComponentProps {}
+// export interface VideoComponentProps {}
 
 const IconCheck = () => <img src={iconCheck} alt="icon" />;
 const VideoYoutube = () => (
   <VideoContainer>
-    <YouTube videoId="CxVLsqpcioM" />
+    {/* <YouTube videoId="CxVLsqpcioM" /> */}
+    {/* <Vimeo videoId={"372458899"} /> */}
+    <Vimeo video="372458899" responsive={true} />
   </VideoContainer>
 );
 
-const VideoComponent: React.SFC<VideoComponentProps> = () => {
+// const VideoComponent: React.SFC<VideoComponentProps> = () => {
+const VideoComponent = () => {
   const { languageConfig, language } = React.useContext(LanguageContext);
   let video = languageConfig[language].home.video;
   const TitleSectionVideo = () => (
@@ -52,13 +56,13 @@ const VideoComponent: React.SFC<VideoComponentProps> = () => {
           <li>
             <IconCheck />
             <p>
-              {video.li[0].text} <span> {video.li[0].text}span</span>
+              {video.li[0].text} <span> {video.li[0].span}</span>
             </p>
           </li>
           <li>
             <IconCheck />
             <p>
-              {video.li[1].text} <span> {video.li[1].text}span</span>
+              {video.li[1].text} <span> {video.li[1].span}</span>
             </p>
           </li>
           <li>
@@ -73,7 +77,7 @@ const VideoComponent: React.SFC<VideoComponentProps> = () => {
           <li>
             <IconCheck />
             <p>
-              {video.li[3].text} <span> {video.li[3].text}span</span>
+              {video.li[3].text} <span> {video.li[3].span}</span>
             </p>
           </li>
         </ul>

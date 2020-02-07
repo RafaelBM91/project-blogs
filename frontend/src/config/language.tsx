@@ -17,7 +17,7 @@ const languageConfig = {
         title3: "para las empresas de Mexico y LATAM"
       },
       section: {
-        title1: "QUE HACEMOS",
+        title1: "¿Qué hacemos?",
         title2: "Aquí te contamos qué somos ",
         span: "el mejor",
         section: [
@@ -27,7 +27,7 @@ const languageConfig = {
               "Vamos mucho mas allá de una prueba de penetración. Nuestro equipo de Hackers Éticos entienden la lógica detrás del negocio así como los puntos crítico por donde puede darse un ciberataque."
           },
           {
-            title: "Supervisión",
+            title: "Monitoreo",
             p:
               "Ayudamos a nuestros clientes en aumentar la madurez de sus sistemas monitoreando todos los endpoints de su empresa."
           },
@@ -40,7 +40,7 @@ const languageConfig = {
         button: "Ver más"
       },
       video: {
-        title1: "Porque nosotros",
+        title1: "¿Porqué nosotros",
         title2: "Aquí es por qué deberíamos ser su ",
         titleSpan: "Socio de seguridad",
         title3: "Esto es lo que ",
@@ -170,7 +170,7 @@ const languageConfig = {
       ]
     },
     monitoring: {
-      title1: "Supervisión",
+      title1: "Monitoreo",
       text1:
         "Ayudamos a nuestros clientes en aumentar la madurez de sus sistemas monitoreando todos los endpoints de su empresa. A través de herramientas sofisticados como nuestro SOC/ SIEM y nuestras plataformas Risk y Context, nos aseguramos de brindarle a nuestro cliente una solución de monitoreo productivo 24x7x365.",
       li: [
@@ -187,7 +187,8 @@ const languageConfig = {
         "Malware",
         "Intrusos en redes internas",
         "Actividad Maliciosa en redes",
-        "Ciberataques dirigidos"
+        "Ciberataques dirigidos",
+        "Y otro tipo de riesgos Cibernéticos"
       ]
     },
     consultancy: {
@@ -207,7 +208,7 @@ const languageConfig = {
         "Correo",
         "Celular",
         "Sitio web",
-        "Breve descripción del problema/ataque ( texto corto ) "
+        "Breve descripción del problema/ataque"
       ],
       button: "Envia"
     },
@@ -239,7 +240,7 @@ const languageConfig = {
         title3: "Latin America companies"
       },
       section: {
-        title1: "WHAT WE DO",
+        title1: "What we do?",
         title2: "Here we tell you what are we ",
         span: "the best at",
         section: [
@@ -262,7 +263,7 @@ const languageConfig = {
         button: "View more"
       },
       video: {
-        title1: "Why us",
+        title1: "Why us?",
         title2: "Here is why we should be your ",
         titleSpan: "Security partner",
         title3: "These is what ",
@@ -384,7 +385,6 @@ const languageConfig = {
       text1:
         "We go much further than a vulnerability scan. Our White Hat hackers aim to understand the critical points of our business., get into the most vulnerable and deep corners of our customers, managing to protect their day-to-day operations.",
       li: [
-        "De la parte en INGLES dejarlo asi:",
         "API´s Security",
         "Mobile App Security",
         "Web App Security",

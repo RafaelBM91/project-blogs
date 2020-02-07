@@ -4,7 +4,7 @@ export const TitleForm = styled.div`
   text-align: center;
   h2 {
     color: #2c3e50;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 30px;
     margin: 50px 0 22px;
