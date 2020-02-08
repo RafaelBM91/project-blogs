@@ -1,5 +1,8 @@
 import * as React from "react";
 import { LanguageContext } from "../../context/language";
+import { useMutation } from "@apollo/react-hooks";
+import { CREATE_DIAGNOSTIG } from "../../graphql/querys/diagnostic";
+import Wrapper from "../../graphql/provider";
 //Mango-ly
 import { FormML } from "../../mangoLy";
 
@@ -31,6 +34,7 @@ interface iInitialValue {
 const FormComponent: React.SFC<FormComponentProps> = () => {
   const { languageConfig, language } = React.useContext(LanguageContext);
   let form = languageConfig[language].home.form;
+  let sendForm = languageConfig[language].home.sendForm;
   const [sendOk, setSendOk] = React.useState(false);
   const initialValue: iInitialValue = {
     value1: "",
@@ -39,8 +43,21 @@ const FormComponent: React.SFC<FormComponentProps> = () => {
     value4: ""
   };
   const [valueForm, setValueForm] = React.useState(initialValue);
+  const [addTodo, { data }] = useMutation(CREATE_DIAGNOSTIG);
   const hadleSubmit = (e: any) => {
     e.preventDefault();
+    addTodo({
+      variables: {
+        input: {
+          data: {
+            name: valueForm.value2,
+            url: valueForm.value1,
+            email: valueForm.value3,
+            phone: valueForm.value4
+          }
+        }
+      }
+    });
     setSendOk(true);
     setValueForm(initialValue);
   };
@@ -72,8 +89,8 @@ const FormComponent: React.SFC<FormComponentProps> = () => {
                 <img src={check} alt="icon" />
               </ContainerImg>
               <ContainerText>
-                <h3>Form send</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h3>{sendForm.title}</h3>
+                <p>{sendForm.text}</p>
               </ContainerText>
             </SendOk>
           ) : (
@@ -142,4 +159,4 @@ const FormComponent: React.SFC<FormComponentProps> = () => {
   ) : null;
 };
 
-export default FormComponent;
+export default Wrapper(FormComponent);

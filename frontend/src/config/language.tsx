@@ -220,6 +220,10 @@ const languageConfig = {
       text2: "un escaneo pasivo de su aplicación Web / Sitio Web",
       input: ["Nombre", "Sitio Web", "Correo", "Teléfono: (Opcional)"],
       button: "Envia"
+    },
+    sendForm: {
+      title: "Mensaje enviado",
+      text: "Tu mensage fue enviado con exito"
     }
   },
   en: {
@@ -445,6 +449,10 @@ const languageConfig = {
       text2: "a passive scan of your Web application / Website",
       input: ["Name", "URL Website", "Email", "Phone (optional)"],
       button: "Send it"
+    },
+    sendForm: {
+      title: "Message sent",
+      text: "Your message was sent successfully"
     }
   }
 };
