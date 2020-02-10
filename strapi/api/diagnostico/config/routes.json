@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/diagnosticos",
+      "handler": "Diagnostico.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/diagnosticos/count",
+      "handler": "Diagnostico.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/diagnosticos/:id",
+      "handler": "Diagnostico.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/diagnosticos",
+      "handler": "Diagnostico.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/diagnosticos/:id",
+      "handler": "Diagnostico.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/diagnosticos/:id",
+      "handler": "Diagnostico.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
