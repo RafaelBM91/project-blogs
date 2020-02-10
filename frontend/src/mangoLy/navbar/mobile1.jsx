@@ -49,9 +49,9 @@ const UlMobileNav = styled.ul`
   margin: 0;
   list-style: none;
   li {
-    width: calc(100% - 60px);
-    padding: 20px 30px;
-    font-size: 12px;
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 18px;
     font-weight: bold;
     color: #2c3e50;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

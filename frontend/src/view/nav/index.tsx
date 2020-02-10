@@ -95,7 +95,7 @@ const Nav = (props: iNavProps) => {
             url: "/"
           },
           {
-            text: "Evaluations and Audits",
+            text: "Evaluations",
             url: "/evaluations"
           },
           {

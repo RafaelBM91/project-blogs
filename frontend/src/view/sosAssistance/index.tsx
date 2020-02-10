@@ -79,12 +79,11 @@ const SOSAssistance: React.SFC<SOSAssistanceProps> = () => {
                 <TitleForm>
                   <h2>
                     {sosAssistance.title1}
-                    <br />
-                    {sosAssistance.title2}
+                    <span>{sosAssistance.title2}</span>
                   </h2>
                   <h5>
                     {sosAssistance.text1}
-                    <br />
+
                     {sosAssistance.text2}
                   </h5>
                 </TitleForm>
@@ -156,7 +155,6 @@ const SOSAssistance: React.SFC<SOSAssistanceProps> = () => {
                 />
 
                 <InputSubmit type="submit" value={sosAssistance.button} />
-                <p></p>
               </>
             )}
           </FormML>

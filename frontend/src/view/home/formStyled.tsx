@@ -1,30 +1,41 @@
 import styled from "styled-components";
 import { MQ } from "../../config/media";
 export const TitleForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   h2 {
     color: #2c3e50;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 30px;
-    margin: 50px 0 22px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0;
+    margin-bottom: 10px;
     @media ${MQ.md} {
-      font-size: 50px;
-      margin-top: 50px;
+      font-size: 45px;
       line-height: 50px;
+      margin-bottom: 0.5em;
+      width: 100%;
+      max-width: 370px;
+    }
+    span {
+      font-weight: 700;
     }
   }
   h5 {
     font-weight: 400;
     color: #6c7d8d;
-    font-size: 10px;
+    font-size: 15px;
     line-height: 28px;
     margin: 0 0 30px;
     strong {
       font-weight: 700;
     }
     @media ${MQ.md} {
-      font-size: 18px;
+      font-size: 15px;
+      width: 100%;
+      max-width: 370px;
     }
   }
 `;
@@ -36,7 +47,7 @@ export const BgColor = styled.div`
 export const SendOk = styled.div`
   width: 100%;
   @media ${MQ.md} {
-    width: 60%;
+    width: 370px;
   }
   height: 610px;
   display: flex;
@@ -47,7 +58,7 @@ export const SendOk = styled.div`
 `;
 export const ContainerImg = styled.div`
   /* border: 1px solid red; */
-  height: 50%;
+  height: 30%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -62,10 +73,33 @@ export const ContainerText = styled.div`
   width: 100%;
   h3 {
     text-align: center;
+    color: #2c3e50;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    @media ${MQ.md} {
+      font-size: 45px;
+      line-height: 50px;
+      /* margin-bottom: 0.5em; */
+    }
   }
   p {
     text-align: center;
-    color: #2c3e50;
+    font-weight: 400;
+    color: #6c7d8d;
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 0 30px;
+    strong {
+      font-weight: 700;
+    }
+    @media ${MQ.md} {
+      font-size: 15px;
+      width: 100%;
+      max-width: 370px;
+    }
   }
 `;
 
@@ -73,28 +107,26 @@ export const InputSubmit = styled.input.attrs({ type: "submit" })`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  padding: 15px 35px;
   border-radius: 60px;
-  height: 35px;
+  height: 60px;
   outline: none;
   border: none;
   background: #0984e3;
-  font-size: 0.7rem;
+  font-size: 16px;
   font-weight: 600;
   color: white;
   transition: transform 0.2s;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   &:hover {
     transform: scale(1.03);
   }
   @media ${MQ.sm} {
-    width: 200px;
     font-size: 16px;
   }
   @media ${MQ.md} {
     height: 60px;
-    width: 200px;
     font-size: 16px;
-    margin-bottom: 70px;
+    margin-bottom: 0px;
   }
 `;

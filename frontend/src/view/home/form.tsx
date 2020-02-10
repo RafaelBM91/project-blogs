@@ -34,7 +34,7 @@ interface iInitialValue {
 const FormComponent: React.SFC<FormComponentProps> = () => {
   const { languageConfig, language } = React.useContext(LanguageContext);
   let form = languageConfig[language].home.form;
-  let sendForm = languageConfig[language].home.sendForm;
+  let sendForm = languageConfig[language].sendForm;
   const [sendOk, setSendOk] = React.useState(false);
   const initialValue: iInitialValue = {
     value1: "",
@@ -73,8 +73,8 @@ const FormComponent: React.SFC<FormComponentProps> = () => {
           <img src={img2} alt="" />
           <img src={img3} alt="" />
           <img src={img4} alt="" />
-          <img src={img4} alt="" />
-          <img src={img5} alt="" />
+          {/* <img src={img4} alt="" />
+          <img src={img5} alt="" /> */}
         </div>
       </HomeSectionTitle>
     ) : null;
@@ -98,8 +98,8 @@ const FormComponent: React.SFC<FormComponentProps> = () => {
               <TitleForm>
                 <h2>
                   {form.title2}
-                  <br />
-                  {form.title2br}
+                  {/* <br /> */}
+                  <span>{form.title2br}</span>
                 </h2>
                 <h5>
                   <strong>{form.span3}</strong>

@@ -74,6 +74,9 @@ export const Text3 = styled.div`
     @media ${MQ.md} {
       align-items: flex-start;
     }
+    a {
+      text-decoration: none;
+    }
     h3 {
       font-size: 2.17em;
       @media ${MQ.md} {

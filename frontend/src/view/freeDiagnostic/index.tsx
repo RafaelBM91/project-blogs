@@ -75,13 +75,11 @@ const FreeDiagnostic: React.SFC<FreeDiagnosticProps> = () => {
                 <TitleForm>
                   <h2>
                     {freeDiagnostic.title1}
-                    <br />
-                    {freeDiagnostic.title2}
+                    <span>{freeDiagnostic.title2}</span>
                   </h2>
                   <h5>
                     <strong>{freeDiagnostic.span1}</strong>
                     {freeDiagnostic.text1}
-                    {/* <br /> */}
                     {freeDiagnostic.text2}
                   </h5>
                 </TitleForm>
@@ -129,11 +127,9 @@ const FreeDiagnostic: React.SFC<FreeDiagnosticProps> = () => {
                   name="value4"
                   setValue={setValueForm}
                 />
+                <InputSubmit type="submit" value={freeDiagnostic.button} />
               </>
             )}
-
-            <InputSubmit type="submit" value={freeDiagnostic.button} />
-            <p></p>
           </FormML>
         </FormML.Container>
       </>

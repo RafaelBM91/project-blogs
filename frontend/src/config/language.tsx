@@ -4,7 +4,7 @@ const languageConfig = {
       industries: "Industrias",
       solutions: {
         title: "Soluciones",
-        list: ["Evaluación", "Supervisión", "Consultoría"]
+        list: ["Evaluación", "Monitoreo", "Consultoría"]
       },
       freeDiagnostic: "Diagnóstico ",
       sosAssistance: "Emergencia",
@@ -18,11 +18,11 @@ const languageConfig = {
       },
       section: {
         title1: "¿Qué hacemos?",
-        title2: "Aquí te contamos qué somos ",
-        span: "el mejor",
+        title2: "Aquí te contamos qué es ",
+        span: "lo que hacemos mejor",
         section: [
           {
-            title: "Evaluaciones y auditorias",
+            title: "Evaluaciones",
             p:
               "Vamos mucho mas allá de una prueba de penetración. Nuestro equipo de Hackers Éticos entienden la lógica detrás del negocio así como los puntos crítico por donde puede darse un ciberataque."
           },
@@ -40,7 +40,7 @@ const languageConfig = {
         button: "Ver más"
       },
       video: {
-        title1: "¿Porqué nosotros",
+        title1: "¿Porqué nosotros?",
         title2: "Aquí es por qué deberíamos ser su ",
         titleSpan: "Socio de seguridad",
         title3: "Esto es lo que ",
@@ -67,22 +67,22 @@ const languageConfig = {
         ]
       },
       card: {
-        title1: "ELÍGENOS",
+        title1: "¿Qué industrias conocemos mejor?",
         title2: "Calidad probada en todas ",
         span: "estas industrias"
       },
       slyder: {
-        title1: "Confiado por ",
-        span: "500's empresas felices ",
-        title2: "alrededor del mundo"
+        title1: "Estos son algunos de los clientes que ",
+        span: "confian en nosotros",
+        title2: ""
       },
       faqs: {
-        title1: "FAQS",
+        title1: "¿Tienes dudas?",
         title2: "Contáctanos si aún tienes ",
         span: "más preguntas",
         faqs: [
           {
-            title: "¿Qué hace Delta Protect?icon",
+            title: "¿Qué hace Delta Protect?",
             p1:
               "En Delta tenemos como finalidad regresarle la seguridad y privacidad digital al mundo. Es por esto que proveemos diferentes servicios de ciberseguridad como:",
             p2:
@@ -109,13 +109,13 @@ const languageConfig = {
           },
           {
             title:
-              "¿Cuál es la diferencia entre un Grey Box Attack y un White Box Attack? (Tabla?)",
+              "¿Cuál es la diferencia entre un Grey Box Attack y un White Box Attack?",
             p:
               "Estos son pruebas de penetración que se les hacen a los diferentes tipos de sistemas (Apps móviles, web, APIs, etc). En estos tipos de pentests, necesitamos que nos des acceso a cierta información como accesos, credenciales, soporte, entre otras cosas. Esto para poder brindar un servicio completo, ya que en la mayoría de los ataques se hace cierta investigación sobre las empresas. Lo que diferencia un Grey Box a un White Box Attack es que en este último solicitamos el código fuente. Esto con la finalidad de poder brindar un mejor servicio, creando la seguridad de adentro hacia afuera. Entendemos que no quieras compartir este tipo de información, es por eso que en el Grey Box no solicitamos esta información."
           },
           {
             title:
-              "Si tengo contratado a AWS o Microsoft Azure significa que estoy seguro, ¿no?",
+              "¿Si tengo contratado AWS o Azure significa que estoy seguro?.",
             p:
               "No. El tener contratado a este tipo de servicios con empresas tan prestigiosas si vuelve a tu servidor seguro. Sin embargo, el puente conector entre tu sistema y el servidor (si, la API) es bastante vulnerable, por lo que significa que tu sistema no está seguro. ¿Cómo sé qué servicio es el que más me conviene? Cada empresa tiene necesidades diferentes, podemos aydarte a para ver qué es lo que mejor se te acomoda y poder elevar."
           },
@@ -128,8 +128,8 @@ const languageConfig = {
         button: "FAQS"
       },
       form: {
-        title1: "Confiado por nuestro ",
-        span1: "grandes socios",
+        title1: "Con el apoyo de ",
+        span1: "nuestros partners",
         title2: "¿Qué tan expuesto está ",
         title2br: "tu negocio?",
         span3: "Importante: ",
@@ -162,8 +162,8 @@ const languageConfig = {
         "Vamos mucho mas allá de una prueba de penetración. Nuestro equipo de Hackers Éticos entienden la lógica detrás del negocio así como los puntos crítico por donde puede darse un ciberataque. Logramos detectar cuales son los rincones más vulnerables y profundos de nuestros clientes, logrando proteger sus operaciones cotidianas: ",
       li: [
         "Seguridad para API´s",
-        "Seguridad para plataformas WEB",
-        "Seguridad para plataformas Móviles",
+        "Seguridad para WEB",
+        "Seguridad para Móviles",
         "Seguridad en la Nube",
         "Revisión de Código",
         "Server Hardening"
@@ -174,11 +174,11 @@ const languageConfig = {
       text1:
         "Ayudamos a nuestros clientes en aumentar la madurez de sus sistemas monitoreando todos los endpoints de su empresa. A través de herramientas sofisticados como nuestro SOC/ SIEM y nuestras plataformas Risk y Context, nos aseguramos de brindarle a nuestro cliente una solución de monitoreo productivo 24x7x365.",
       li: [
-        "Risk™ Digital Risk Monitoring",
+        "Risk™ Monitoring",
         "Account Takeover (ATO)",
         "Actividad de Botnets",
         "Abuso de Marcas",
-        "Credenciales de correo empresarial comprometidas",
+        "Correo comprometidos",
         "Actividad Cibercriminal",
         "Actividad DoS/DDos",
         "Brechas de seguridad",
@@ -186,9 +186,9 @@ const languageConfig = {
         "Phishing",
         "Malware",
         "Intrusos en redes internas",
-        "Actividad Maliciosa en redes",
+        "Malware en redes",
         "Ciberataques dirigidos",
-        "Y otro tipo de riesgos Cibernéticos"
+        "Otros riesgos Cibernéticos"
       ]
     },
     consultancy: {
@@ -198,10 +198,10 @@ const languageConfig = {
       li: ["DevSecOps", "Análisis forense", "INAI y CNBV"]
     },
     sosAssistance: {
-      title1: "¿Recibiste un",
+      title1: "¿Recibiste un ",
       title2: "Ciberataque?",
-      text1: "Déjanos tus datos y te",
-      text2: "contactaremos en cuanto antes.",
+      text1: "Déjanos tus datos y te estaremos ",
+      text2: "contactando a penas nuestro equipo analice tu emergencia.",
       input: [
         "Nombre & Apellido",
         "Empresa",
@@ -210,20 +210,21 @@ const languageConfig = {
         "Sitio web",
         "Breve descripción del problema/ataque"
       ],
-      button: "Envia"
+      button: "Asistencia"
     },
     freeDiagnostic: {
-      title1: "¿Qué tan expuesto",
+      title1: "¿Qué tan expuesto ",
       title2: "está su negocio?",
-      span1: "Importante:",
-      text1: "Esto no es ningún tipo de prueba de penetación, es simplemente",
-      text2: "un escaneo pasivo de su aplicación Web / Sitio Web",
-      input: ["Nombre", "Sitio Web", "Correo", "Teléfono: (Opcional)"],
-      button: "Envia"
+      span1: "",
+      text1: "Simplemente haremos ",
+      text2: "un escaneo pasivo de su aplicación Web o Sitio.",
+      input: ["Nombre", "Sitio Web", "Correo", "Teléfono"],
+      button: "Enviar diagnóstico"
     },
     sendForm: {
       title: "Mensaje enviado",
-      text: "Tu mensage fue enviado con exito"
+      text:
+        "Apenas nuestro equipo reciba la solicitud pondremos un especialista en contacto contigo para poder resolver inmediatamente tu problema."
     }
   },
   en: {
@@ -249,7 +250,7 @@ const languageConfig = {
         span: "the best at",
         section: [
           {
-            title: "Evaluations and Audits",
+            title: "Evaluations",
             p:
               "We go much further than a vulnerability scan. Our White Hat hackers aim to understand the critical points of our business."
           },
@@ -294,22 +295,22 @@ const languageConfig = {
         ]
       },
       card: {
-        title1: "THET CHOOSE US",
+        title1: "Who choose us?",
         title2: "Proven quality in all of ",
         span: "these industries"
       },
       slyder: {
-        title1: "Trusted by ",
-        span: "500's happy companies ",
-        title2: "around the world"
+        title1: "These are some of the clients that ",
+        span: "trust in us",
+        title2: ""
       },
       faqs: {
-        title1: "FAQS",
+        title1: "Having doubts?",
         title2: "Contact us if you still have ",
         span: "more questions",
         faqs: [
           {
-            title: "¿What does Delta Protect do? Icon",
+            title: "What does Delta Protect do?",
             p1:
               "At Delta we aim to return digital security and privacy to the world. This is why we provide different cybersecurity services such as:",
             p2:
@@ -325,7 +326,7 @@ const languageConfig = {
             ]
           },
           {
-            title: "¿What is an ASQ??",
+            title: "What is an ASQ?",
             p:
               "Assessment Security Quotient or Security Quotient. This is a passive scan of your website. When we say passive scanning we don't mean to make a hacking attempt. This is simply a passive scan of a web app. That is, the public information is scanned to see if there are open or closed ports, if there is a firewall installed, if the login is encrypted or some type of mail / phone is found. Using the thief and house metaphor, an ASQ is simply for a thief to stand outside your house to analyze ways to enter, see if they have any open doors / windows, electric fences, security, etc. Here there was never an attempt to enter, it is only a 'glance'."
           },
@@ -337,13 +338,12 @@ const languageConfig = {
           },
           {
             title:
-              "What is the difference between a Gray Box Attack and a White Box Attack? (Table?)",
+              "What is the difference between Gray Box and White Box Attack?",
             p:
               "These are penetration tests that are made to different types of systems (mobile apps, web, APIs, etc.). In these types of pentests, we need you to give us access to certain information such as access, credentials, support, among other things. This to be able to provide a complete service, since in the majority of the attacks some investigation is done on the companies. What differentiates a Gray Box from a White Box Attack is that in the latter we request the source code. This in order to provide a better service, creating security from the inside out. We understand that you do not want to share this type of information, that is why in the Gray Box we do not request this information."
           },
           {
-            title:
-              "If I have hired AWS or Microsoft Azure it means I'm sure, right?",
+            title: "If I have hired AWS or Azure it means I'm safe?",
             p:
               "No. Having hired this type of services with such prestigious companies if you return to your secure server. However, the connecting bridge between your system and the server (yes, the API) is quite vulnerable, which means that your system is not secure. How do I know which service is best for me? Each company has different needs, we can help you to see what suits you best and be able to raise."
           },
@@ -356,9 +356,9 @@ const languageConfig = {
         button: "FAQS"
       },
       form: {
-        title1: "Trusted by our ",
+        title1: "Supported by our ",
         span1: "great partners",
-        title2: "How exposet is ",
+        title2: "How exposed is ",
         title2br: "your business?",
         span3: "Important: ",
         title3: "This does not imply a hack to your site.",
@@ -393,7 +393,7 @@ const languageConfig = {
         "Mobile App Security",
         "Web App Security",
         "Cloud Security",
-        "Code Review ( DAST & SAST )",
+        "Code Review DAST & SAST",
         "Server Hardening",
         "Network Security"
       ]
@@ -401,23 +401,24 @@ const languageConfig = {
     monitoring: {
       title1: "Monitoring",
       text1:
-        "We help our clients increase their maturity by ensuring each endpoint of the company., through sophisticated tools, SIEM / SOCs and platforms such as RISK and CONTEXT, we ensure that our clients have the peace of mind that we support them 24/7/365 days of the year.operations.",
+        "We help our clients increase their maturity by ensuring each endpoint of the company. through sophisticated tools, SIEM / SOCs and platforms such as RISK and CONTEXT, we ensure that our clients have the peace of mind that we support them 24/7/365 days of the year operations.",
       li: [
         "SOC / Siem",
-        "Risk™ Digital Risk Monitoring",
+        "Risk™ Monitoring",
         "Account Takeover (ATO)",
         "Botnet Activity",
         "Brand Abuse",
-        "Business e-mail compromise",
+        "Email compromise",
         "Cybercriminal Activity",
         "DoS/DDos Activity",
-        "Data Breaches and Credentials Leakage",
+        "Data Breaches",
+        "Credentials Leakage",
         "Executives Digital Risks",
         "Phishing Attacks",
         "Malware Distribution",
         "Network Intrusions",
-        "Network Malicious Activity"
-        // "Targeted Cyber Attacks"
+        "Network Malicious Activity",
+        "Targeted Cyber Attacks"
       ]
     },
     consultancy: {
@@ -427,8 +428,8 @@ const languageConfig = {
       li: ["DevSecOps", "Forensic analysis", "INAI & CNBV"]
     },
     sosAssistance: {
-      title1: "Are you under",
-      title2: "an Attack?",
+      title1: "Are you under an ",
+      title2: "Attack?",
       text1: "Leave us your information and",
       text2: "we will contact you ASAP.",
       input: [
@@ -437,22 +438,23 @@ const languageConfig = {
         "Email",
         "Cell Phone",
         "Domain",
-        "Brief description of the CyberAttack"
+        "Description of the CyberAttack"
       ],
-      button: "Send it"
+      button: "Assistance"
     },
     freeDiagnostic: {
-      title1: "How exposed",
-      title2: "is your business?",
-      span1: "Important:",
+      title1: "How exposed is ",
+      title2: "your business?",
+      span1: "",
       text1: "This is not any type of penetration test, it is simply",
       text2: "a passive scan of your Web application / Website",
-      input: ["Name", "URL Website", "Email", "Phone (optional)"],
-      button: "Send it"
+      input: ["Name", "URL Website", "Email", "Phone"],
+      button: "Send diagnostic"
     },
     sendForm: {
       title: "Message sent",
-      text: "Your message was sent successfully"
+      text:
+        "As soon as our team receives the request we will put a specialist in contact with you to be able to solve your problem immediately."
     }
   }
 };

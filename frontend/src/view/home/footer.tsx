@@ -92,7 +92,7 @@ const FooterComponent: React.SFC<FooterComponentProps> = props => {
                 <div>
                   <h5>{myFooter.li4[0]}</h5>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5215551876769&text=&source=&data="
+                    href="https://api.whatsapp.com/send?phone=5215551876769&text=Think%20I%20had%20been%20hacked&source=&data="
                     target="_blank"
                     rel="noopener noreferrer"
                   >

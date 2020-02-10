@@ -13,11 +13,11 @@ const FormSC = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 5px;
+  padding: 40px;
   width: 100%;
   @media ${MQ.sm} {
     width: ${props => props.width};
-    padding: 20px 3em;
+    padding: 3em;
   }
 `;
 

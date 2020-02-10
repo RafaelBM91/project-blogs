@@ -38,10 +38,10 @@ const CardContainer: React.SFC<CardContainerProps> = () => {
       >
         <CardML>
           <CardML.header>
-            <CardML.Img3 src={icon1} height="100px" />
+            <CardML.Img3 src={icon4} height="100px" />
           </CardML.header>
           <CardML.Body>
-            <TextH3>Saas</TextH3>
+            <TextH3>Fintech</TextH3>
           </CardML.Body>
         </CardML>
         <CardML>
@@ -54,26 +54,10 @@ const CardContainer: React.SFC<CardContainerProps> = () => {
         </CardML>
         <CardML>
           <CardML.header>
-            <CardML.Img3 src={icon3} height="100px" />
+            <CardML.Img3 src={icon1} height="100px" />
           </CardML.header>
           <CardML.Body>
-            <TextH3>Healthcare</TextH3>
-          </CardML.Body>
-        </CardML>
-        <CardML>
-          <CardML.header>
-            <CardML.Img3 src={icon4} height="100px" />
-          </CardML.header>
-          <CardML.Body>
-            <TextH3>Fintech</TextH3>
-          </CardML.Body>
-        </CardML>
-        <CardML>
-          <CardML.header>
-            <CardML.Img3 src={icon5} height="100px" />
-          </CardML.header>
-          <CardML.Body>
-            <TextH3>Blockchain</TextH3>
+            <TextH3>Saas</TextH3>
           </CardML.Body>
         </CardML>
         <CardML>
@@ -82,6 +66,23 @@ const CardContainer: React.SFC<CardContainerProps> = () => {
           </CardML.header>
           <CardML.Body>
             <TextH3>Enterprise</TextH3>
+          </CardML.Body>
+        </CardML>
+        <CardML>
+          <CardML.header>
+            <CardML.Img3 src={icon3} height="100px" />
+          </CardML.header>
+          <CardML.Body>
+            <TextH3>Healthcare</TextH3>
+          </CardML.Body>
+        </CardML>
+
+        <CardML>
+          <CardML.header>
+            <CardML.Img3 src={icon5} height="100px" />
+          </CardML.header>
+          <CardML.Body>
+            <TextH3>Blockchain</TextH3>
           </CardML.Body>
         </CardML>
       </CardML.Container>

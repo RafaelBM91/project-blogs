@@ -52,7 +52,7 @@ export const HomeSectionTitle = styled.div`
       margin: 20px;
       @media ${MQ.md} {
         margin: 0;
-        height: 60px;
+        height: 70px;
       }
     }
   }

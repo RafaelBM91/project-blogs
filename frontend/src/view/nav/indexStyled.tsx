@@ -225,12 +225,12 @@ export const ContainerImgNav = styled.div`
 export const ContainerImgMobile = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   img {
-    margin: 30px 15px;
-    width: 50px;
-    height: 50px;
+    margin: 30px 0px 30px 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
   }
 `;

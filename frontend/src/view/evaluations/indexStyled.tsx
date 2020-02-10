@@ -19,7 +19,7 @@ export const UlContainer = styled.ul`
     grid-template-columns: repeat(2, 1fr);
   }
   @media ${MQ.md} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   li {
     margin-bottom: 15px;

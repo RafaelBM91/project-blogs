@@ -5,7 +5,7 @@ import { MQ } from "../../config/media";
 const ContainerInput = styled.div`
   position: relative;
   margin-bottom: 30px;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   @media ${MQ.md} {
@@ -19,16 +19,24 @@ const ContainerInput = styled.div`
     transform: translateY(-50%);
     transform-origin: left center;
     transition: transform 0.3s;
-    font-size: 0.7em;
+    font-size: 16px;
     @media ${MQ.md} {
-      font-size: 1em;
+      font-size: 16px;
     }
     ${props =>
       props.focus &&
       css`
         color: #2a93f0;
-        transform: translateY(-120%) scale(0.5);
+        transform: translateY(-130%) scale(0.6);
       `}
+      @media ${MQ.md} {
+        ${props =>
+          props.focus &&
+          css`
+            color: #2a93f0;
+            transform: translateY(-160%) scale(0.8);
+          `}
+      }
   }
 `;
 const InputContainerSC = styled.textarea`
@@ -42,7 +50,7 @@ const InputContainerSC = styled.textarea`
   border: 2px solid #e2e2e2;
   outline: none;
   padding: 30px 25px 10px;
-  font-size: 8px;
+  font-size: 16px;
   font-weight: 700;
   color: ${props => props.color};
   &:focus {
