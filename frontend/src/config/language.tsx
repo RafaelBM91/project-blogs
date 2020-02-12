@@ -1,6 +1,9 @@
 const languageConfig = {
   es: {
     navbar: {
+      home: "Inicio",
+      about: "Acerca de",
+      deltaUnity: "Unidad Delta",
       industries: "Industrias",
       solutions: {
         title: "Soluciones",
@@ -229,6 +232,9 @@ const languageConfig = {
   },
   en: {
     navbar: {
+      home: "Home",
+      about: "About",
+      deltaUnity: "Delta Unity",
       industries: "Industries",
       solutions: {
         title: "Solutions",

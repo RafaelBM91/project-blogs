@@ -91,27 +91,35 @@ const Nav = (props: iNavProps) => {
         bgColor={bgColor}
         data={[
           {
-            text: "Home",
+            text: languageConfig[language].navbar.home,
             url: "/"
           },
           {
-            text: "Evaluations",
+            text: languageConfig[language].navbar.about,
+            url: "/about"
+          },
+          {
+            text: languageConfig[language].navbar.deltaUnity,
+            url: "https://www.deltaunity.co/"
+          },
+          {
+            text: languageConfig[language].navbar.solutions.list[0],
             url: "/evaluations"
           },
           {
-            text: "Monitoring",
+            text: languageConfig[language].navbar.solutions.list[1],
             url: "/monitoring"
           },
           {
-            text: "Consultancy",
+            text: languageConfig[language].navbar.solutions.list[2],
             url: "/consultancy"
           },
           {
-            text: "Free Diagnostic",
+            text: languageConfig[language].navbar.freeDiagnostic,
             url: "/free-diagnostic"
           },
           {
-            text: "SOS Assistance",
+            text: languageConfig[language].navbar.sosAssistance,
             url: "/sos-assistance"
           },
           {
@@ -130,32 +138,6 @@ const Nav = (props: iNavProps) => {
           <ContainerDropDown>
             {languageConfig[language].navbar.industries}
             <IconV />
-            {/* <ContainerIndustries>
-              <li>
-                <img src={icon1} alt="icon" />
-                Saas
-              </li>
-              <li>
-                <img src={icon4} alt="icon" />
-                Fintech
-              </li>
-              <li>
-                <img src={icon2} alt="icon" />
-                Retail
-              </li>
-              <li>
-                <img src={icon5} alt="icon" />
-                Blockchain
-              </li>
-              <li>
-                <img src={icon3} alt="icon" />
-                Healthcare
-              </li>
-              <li>
-                <img src={icon6} alt="icon" />
-                Enterprise
-              </li>
-            </ContainerIndustries> */}
             <ContainerIndustries>
               <li>
                 <div>
@@ -240,7 +222,18 @@ const Nav = (props: iNavProps) => {
           </ContainerDropDown>
           {/* <li>Delta Unity</li>
                         <li>About us</li> */}
-
+          <li>
+            <a
+              href="https://www.deltaunity.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {languageConfig[language].navbar.deltaUnity}
+            </a>
+          </li>
+          <li onClick={() => historyPush("/about")}>
+            {languageConfig[language].navbar.about}
+          </li>
           <li>
             <ButtonNav bgColor="#0984E3">
               <button onClick={() => historyPush("/free-diagnostic")}>
