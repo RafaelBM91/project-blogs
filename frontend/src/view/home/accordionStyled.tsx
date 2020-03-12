@@ -16,7 +16,7 @@ export const ContainerTitleSC = styled.div`
       margin-bottom: 25px;
     }
     @media ${MQ.md} {
-      font-size: 24px;
+      font-size: 22px;
       margin-bottom: 20px;
     }
   }
@@ -32,7 +32,7 @@ export const ContainerTitleSC = styled.div`
     }
     @media ${MQ.md} {
       margin-bottom: 50px;
-      font-size: 38px;
+      font-size: 34px;
     }
     span {
       font-weight: 700;

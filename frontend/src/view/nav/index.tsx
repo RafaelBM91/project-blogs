@@ -12,13 +12,15 @@ import {
   ContainerSolutions,
   ButtonNav,
   ImgContainer,
-  ContainerImgMobile
+  ContainerImgMobile,
+  ContainerButtonsMobile
 } from "./indexStyled";
 
 //image
 import usa from "../img/navbar/usa.jpg";
 import mx from "../img/navbar/mx.jpg";
 import logo from "../img/navbar/logo.svg";
+// import logo from "../img/navbar/img.jpeg";
 import icon1 from "../img/home/cardIcon1.svg";
 import icon2 from "../img/home/cardIcon2.svg";
 import icon3 from "../img/home/cardIcon3.svg";
@@ -100,7 +102,8 @@ const Nav = (props: iNavProps) => {
           },
           {
             text: languageConfig[language].navbar.deltaUnity,
-            url: "https://www.deltaunity.co/"
+            url: "https://www.deltaunity.co/",
+            other: true
           },
           {
             text: languageConfig[language].navbar.solutions.list[0],
@@ -115,16 +118,8 @@ const Nav = (props: iNavProps) => {
             url: "/consultancy"
           },
           {
-            text: languageConfig[language].navbar.freeDiagnostic,
-            url: "/free-diagnostic"
-          },
-          {
-            text: languageConfig[language].navbar.sosAssistance,
-            url: "/sos-assistance"
-          },
-          {
-            text: "Blog",
-            url: "/blog"
+            text: languageConfig[language].navbar.quote,
+            url: "/quote"
           }
         ]}
       >
@@ -132,6 +127,19 @@ const Nav = (props: iNavProps) => {
           <img onClick={handleLanguageToEn} src={usa} alt="usa" />
           <img onClick={handleLanguageToEs} src={mx} alt="mx" />
         </ContainerImgMobile>
+        <ContainerButtonsMobile>
+          <ButtonNav bgColor="#0984E3">
+            <button onClick={() => historyPush("/free-diagnostic")}>
+              {languageConfig[language].navbar.freeDiagnostic}
+            </button>
+          </ButtonNav>
+
+          <ButtonNav bgColor="#F4577B">
+            <button onClick={() => historyPush("/sos-assistance")}>
+              {languageConfig[language].navbar.sosAssistance}
+            </button>
+          </ButtonNav>
+        </ContainerButtonsMobile>
       </NavBarML.Mobile1>
       <NavBarML.type2 bgColor={bgColor} logoImg={logo} fixed={true}>
         <ContainerButtonsNav>
@@ -227,12 +235,16 @@ const Nav = (props: iNavProps) => {
               href="https://www.deltaunity.co/"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ color: "white", textDecoration: "none" }}
             >
               {languageConfig[language].navbar.deltaUnity}
             </a>
           </li>
           <li onClick={() => historyPush("/about")}>
             {languageConfig[language].navbar.about}
+          </li>
+          <li onClick={() => historyPush("/quote")}>
+            {languageConfig[language].navbar.quote}
           </li>
           <li>
             <ButtonNav bgColor="#0984E3">

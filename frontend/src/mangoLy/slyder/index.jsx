@@ -26,7 +26,7 @@ const Container2 = styled.div`
   position: absolute;
   top: 0;
   left: ${props => props.slyderPositionX};
-  transition: left 0.3s;
+  transition: left 3s linear;
   height: ${props => props.heightM};
   @media ${MQ.sm} {
     height: ${props => props.heightT};
@@ -52,7 +52,7 @@ const CircleColor = styled.div`
   height: 10px;
   width: 10px;
   transform: scale(1);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   ${props =>
     props.colorSC &&
     css`
@@ -103,7 +103,7 @@ const Slyder1 = props => {
   React.useEffect(() => {
     const next = current === 3 ? 1 : current + 1;
     handleNextSlyde(current);
-    const id = setTimeout(() => setCurrent(next), 3000);
+    const id = setTimeout(() => setCurrent(next), 5000);
     // console.log("next", next, "current", current);
     return () => clearTimeout(id);
   }, [current]);

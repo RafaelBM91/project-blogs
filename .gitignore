@@ -116,6 +116,7 @@ build
 mongodb/**
 mongodb_config/**
 .next
-strapi/public/uploads/**
+admin/public/uploads/**
 postgres/
 .records/**
+jenkins_home/

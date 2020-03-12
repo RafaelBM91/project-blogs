@@ -3,13 +3,19 @@ body {
   background: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* zoom: 75%; */
 }
+/* @media (min-width: 799px) {
+  body {
+    zoom: 80%;
+  }
+} */
 
-input,
-button {
-  -webkit-appearance: none;
-}
 * {
   font-family: "PT Sans", sans-serif;
+}
+
+input[type="submit"],
+button {
+  -webkit-appearance: none;
+  /* -webkit-border-radius: 0; */
 }

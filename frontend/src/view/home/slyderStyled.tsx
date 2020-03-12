@@ -7,14 +7,18 @@ export const Slyder1Container = styled.div`
   align-items: center;
   div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     img {
       margin: 0 10px 20px;
-      width: 100px;
+      max-width: 100px;
+
+      filter: grayscale(100%);
+      max-height: 50px;
+
       @media ${MQ.sm} {
-        width: 10%;
+        max-width: 10%;
       }
       @media ${MQ.md} {
         margin: 0 20px;
@@ -36,7 +40,7 @@ export const ContainerTitle = styled.h2`
   }
   @media ${MQ.md} {
     margin-bottom: 50px;
-    font-size: 38px;
+    font-size: 34px;
   }
   span {
     font-weight: 700;

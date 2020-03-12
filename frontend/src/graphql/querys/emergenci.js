@@ -10,6 +10,8 @@ export const CREATE_EMERGENCI = gql`
         phone
         company
         description
+        typeofatack
+        compromisedsystem
       }
     }
   }

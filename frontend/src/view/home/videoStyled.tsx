@@ -18,7 +18,7 @@ export const VideoContainerTitle = styled.div`
       margin-bottom: 25px;
     }
     @media ${MQ.md} {
-      font-size: 24px;
+      font-size: 22px;
       margin-bottom: 20px;
     }
   }
@@ -34,7 +34,7 @@ export const VideoContainerTitle = styled.div`
     }
     @media ${MQ.md} {
       margin-bottom: 50px;
-      font-size: 38px;
+      font-size: 34px;
     }
     span {
       font-weight: 700;
@@ -70,9 +70,12 @@ export const TextContainer = styled.div`
     }
     @media ${MQ.md} {
       text-align: left;
-      font-size: 50px;
+      font-size: 40px;
       margin-bottom: 40px;
       line-height: 50px;
+    }
+    @media ${MQ.lg} {
+      font-size: 50px;
     }
   }
   ul {

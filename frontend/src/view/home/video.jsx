@@ -54,19 +54,25 @@ const VideoComponent = () => {
         </h2>
         <ul>
           <li>
-            <IconCheck />
+            <div>
+              <IconCheck />
+            </div>
             <p>
               {video.li[0].text} <span> {video.li[0].span}</span>
             </p>
           </li>
           <li>
-            <IconCheck />
+            <div>
+              <IconCheck />
+            </div>
             <p>
               {video.li[1].text} <span> {video.li[1].span}</span>
             </p>
           </li>
           <li>
-            <IconCheck />
+            <div>
+              <IconCheck />
+            </div>
             <p>
               {video.li[2].text1}
               <span>{video.li[2].span1}</span>
@@ -75,7 +81,9 @@ const VideoComponent = () => {
             </p>
           </li>
           <li>
-            <IconCheck />
+            <div>
+              <IconCheck />
+            </div>
             <p>
               {video.li[3].text} <span> {video.li[3].span}</span>
             </p>

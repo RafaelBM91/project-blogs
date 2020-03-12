@@ -27,14 +27,14 @@ const ContainerInput = styled.div`
       props.focus &&
       css`
         color: #2a93f0;
-        transform: translateY(-150%) scale(0.7);
+        transform: translateY(-140%) scale(0.6);
       `}
       @media ${MQ.md} {
         ${props =>
           props.focus &&
           css`
             color: #2a93f0;
-            transform: translateY(-160%) scale(0.8);
+            transform: translateY(-130%) scale(0.7);
           `}
       }
   }

@@ -3,7 +3,7 @@ const languageConfig = {
     navbar: {
       home: "Inicio",
       about: "Acerca de",
-      deltaUnity: "Unidad Delta",
+      deltaUnity: "Delta Unity",
       industries: "Industrias",
       solutions: {
         title: "Soluciones",
@@ -11,6 +11,7 @@ const languageConfig = {
       },
       freeDiagnostic: "Diagnóstico ",
       sosAssistance: "Emergencia",
+      quote: "Cotizar",
       language: "En"
     },
     home: {
@@ -43,29 +44,30 @@ const languageConfig = {
         button: "Ver más"
       },
       video: {
-        title1: "¿Porqué nosotros?",
-        title2: "Aquí es por qué deberíamos ser su ",
-        titleSpan: "Socio de seguridad",
+        title1: "¿Por qué nosotros?",
+        title2:
+          "Algunas de las razones por las cuales tenemos que ser tu aliado en ",
+        titleSpan: "Ciberseguridad",
         title3: "Esto es lo que ",
         title4: "nos distingue",
         li: [
           {
-            text: "Mas de 10 ",
-            span: "certificados de white hat hackers"
+            text: "Más de 35 ",
+            span: "White Hat Hackers certificados"
           },
           {
-            text: "Más de 15 ",
-            span: "premios del programa global de recompensas"
+            text: "Entendemos la lógica de negocio del cliente para ",
+            span: "detectar puntos críticos."
           },
           {
-            text1: "Más de 300",
-            span1: "clientes ",
-            text2: "en 15 ",
-            span2: "países"
+            text1: "Retesting ",
+            span1: "gratuito ",
+            text2: "en cada evaluación.",
+            span2: ""
           },
           {
-            text: "Más de 5000 ",
-            span: "infracciones arregladas"
+            text: "Precio ",
+            span: "competitivo"
           }
         ]
       },
@@ -75,8 +77,8 @@ const languageConfig = {
         span: "estas industrias"
       },
       slyder: {
-        title1: "Estos son algunos de los clientes que ",
-        span: "confian en nosotros",
+        title1: "Algunos clientes que han depositado su ",
+        span: "confianza en Delta Protect",
         title2: ""
       },
       faqs: {
@@ -132,22 +134,29 @@ const languageConfig = {
       },
       form: {
         title1: "Con el apoyo de ",
-        span1: "nuestros partners",
-        title2: "¿Qué tan expuesto está ",
-        title2br: "tu negocio?",
-        span3: "Importante: ",
-        title3: "Esto no implica un hack a su sitio.",
-        input1: "URL del sitio web",
-        input2: "Nombre completo",
+        span1: "nuestros Partners",
+        title2: "¿Qué tan expuesto ",
+        title2br: "está tu negocio?",
+        span3: "",
+        title3:
+          "Simplemente haremos un escaneo pasivo de su aplicación Web o Sitio.",
+        input1: "Sitio Web",
+        input2: "Nombre",
         input3: "Correo",
-        input4: "Teléfono (opcional)",
-        button: "Recibir diagnóstico"
+        input4: "Teléfono",
+        button: "Enviar diagnóstico"
       },
       footer: {
         text1:
           "Calle Montes Urales 424, Lomas - Virreyes, Lomas de Chapultepec V Secc., 11000 Ciudad de México, CDMX",
         title2: "Company",
-        li2: ["Blog", "FAQS", "Prueba gratis", "Asistencia SOS"],
+        li2: [
+          "Blog",
+          "FAQS",
+          "Cotizar",
+          "Diagnóstico Gratuito",
+          "Asistencia SOS"
+        ],
         title3: "Oficinas",
         li3: ["Bangalore", "Brisbane", "Hyderabad", "Hong kong"],
         title4: "Contact",
@@ -155,63 +164,86 @@ const languageConfig = {
         text5: [
           "Delta Protect ® 2019 | Delta Exponential Technologies SA de CV",
           "Aviso de Privacidad"
-        ]
+        ],
+        link5: "https://www.deltaprotect.co/es/aviso-privacidad"
       }
     },
     evaluations: {
       title1: "Evaluaciones",
-      title2: "y auditorías",
+      title2: "y Auditorías",
       text1:
-        "Vamos mucho mas allá de una prueba de penetración. Nuestro equipo de Hackers Éticos entienden la lógica detrás del negocio así como los puntos crítico por donde puede darse un ciberataque. Logramos detectar cuales son los rincones más vulnerables y profundos de nuestros clientes, logrando proteger sus operaciones cotidianas: ",
+        "Vamos mucho más allá que un escaneo de vulnerabilidades y pruebas de penetración. Nuestros White Hat Hackers logran entender la lógica y puntos críticos del negocio, logrando entrar a los rincones más vulnerables y profundos de nuestros clientes, protegiendo sus operaciones día a día.",
       li: [
-        "Seguridad para API´s",
-        "Seguridad para WEB",
-        "Seguridad para Móviles",
-        "Seguridad en la Nube",
-        "Revisión de Código",
-        "Server Hardening"
+        {
+          text1: "Seguridad de ",
+          span1: "APIs"
+        },
+        {
+          text1: "Seguridad de ",
+          span1: "Apps Web"
+        },
+        {
+          text1: "Seguridad de ",
+          span1: "Apps Móviles"
+        },
+        {
+          text1: "Seguridad en la ",
+          span1: "Nube"
+        },
+        {
+          text1: "Endurecimiento de ",
+          span1: "Servidores"
+        },
+        {
+          text1: "Red Team ",
+          span1: "Virtual"
+        },
+        {
+          text1: "Revisión de ",
+          span1: "Código"
+        }
       ]
     },
     monitoring: {
       title1: "Monitoreo",
       text1:
-        "Ayudamos a nuestros clientes en aumentar la madurez de sus sistemas monitoreando todos los endpoints de su empresa. A través de herramientas sofisticados como nuestro SOC/ SIEM y nuestras plataformas Risk y Context, nos aseguramos de brindarle a nuestro cliente una solución de monitoreo productivo 24x7x365.",
+        "Ayudamos a nuestros clientes a incrementar su madurez asegurando cada endpoint de su organización, a través de herramientas sofisticadas, logramos que nuestros clientes tengan la tranquilidad que los respaldamos 24/7/365 días del año.",
       li: [
-        "Risk™ Monitoring",
-        "Account Takeover (ATO)",
-        "Actividad de Botnets",
-        "Abuso de Marcas",
-        "Correo comprometidos",
-        "Actividad Cibercriminal",
-        "Actividad DoS/DDos",
-        "Brechas de seguridad",
-        "Riesgo Digital de Ejecutivos",
+        "SIEM/SOC virtual",
+        "Actividad de botnets",
+        "DoS/DDoS",
+        "Riesgo de activos digitales",
         "Phishing",
         "Malware",
-        "Intrusos en redes internas",
-        "Malware en redes",
-        "Ciberataques dirigidos",
-        "Otros riesgos Cibernéticos"
+        "Correos Comprometidos"
       ]
     },
     consultancy: {
       title1: "Consultoría",
       text1:
-        "No nos quedamos atrás con las buenas prácticas que los equipos de desarrollo de las empresas tienen que inculcar en su día a día, es por eso que la seguridad debe estar a cargo de todos dentro de la organización. Incluso los reguladores tienen que saber cómo se posicionan las empresas en materia de seguridad, aquí apoyamos firmemente a nuestros clientes para que cumplan con la Ley en función de su industria.",
-      li: ["DevSecOps", "Análisis forense", "INAI y CNBV"]
+        "No nos quedamos atrás con las buenas prácticas que los equipos de desarrollo de las empresas tienen que inculcar en su día a día, es por eso que la seguridad tiene que estar a cargo de todos dentro de la organización. Incluso los reguladores tienen que saber cómo están paradas las empresas en materia de ciberseguridad, aquí apoyamos arduamente a nuestros clientes a cumplir conforme a la Ley exige, dependiendo de su Industria.",
+      li: [
+        "DevSecOps",
+        "Concientización de Empleados",
+        "Revisión de Arquitectura",
+        "Análisis Forense",
+        "Cumplimiento en Normatividad"
+      ]
     },
     sosAssistance: {
       title1: "¿Recibiste un ",
       title2: "Ciberataque?",
-      text1: "Déjanos tus datos y te estaremos ",
-      text2: "contactando a penas nuestro equipo analice tu emergencia.",
+      text1: "Déjanos tus datos y te estaremos contactando ",
+      text2: "apenas nuestro equipo analice tu caso.",
       input: [
         "Nombre & Apellido",
         "Empresa",
         "Correo",
         "Celular",
         "Sitio web",
-        "Breve descripción del problema/ataque"
+        "Breve descripción del problema/ataque",
+        "Sistema comprometido",
+        "Tipo de ataque"
       ],
       button: "Asistencia"
     },
@@ -233,7 +265,7 @@ const languageConfig = {
   en: {
     navbar: {
       home: "Home",
-      about: "About",
+      about: "About at",
       deltaUnity: "Delta Unity",
       industries: "Industries",
       solutions: {
@@ -242,6 +274,7 @@ const languageConfig = {
       },
       freeDiagnostic: "Diagnostic",
       sosAssistance: "Emergency",
+      quote: "Quote",
       language: "Es"
     },
     home: {
@@ -307,7 +340,7 @@ const languageConfig = {
       },
       slyder: {
         title1: "These are some of the clients that ",
-        span: "trust in us",
+        span: "trust in Delta Protect",
         title2: ""
       },
       faqs: {
@@ -338,7 +371,7 @@ const languageConfig = {
           },
           {
             title:
-              "If I go well in the ASQ, am I already except a cyber attack?",
+              "If I go well in the ASQ, am I already except of a cyber-attack?",
             p:
               "No. There is no company that is 100% exempt from cyber attacks because Black Hat Hackers always find different ways to enter the systems. An ASQ is simply a passive scan of a web app. That is, the public information is scanned to see if there are open or closed ports, if there is any firewall installed, if the login is encrypted or some type of mail / phone is found and no attempt is made to enter, by what having a good score on this report does not mean that you are sure."
           },
@@ -366,19 +399,20 @@ const languageConfig = {
         span1: "great partners",
         title2: "How exposed is ",
         title2br: "your business?",
-        span3: "Important: ",
-        title3: "This does not imply a hack to your site.",
-        input1: "URL website",
-        input2: "Complete name",
-        input3: "Mail",
-        input4: "Telephone (optional)",
-        button: "Receive diagnostic"
+        span3: "",
+        title3:
+          "This is not any type of penetration test, it is simply a passive scan of your Web application / Website",
+        input1: "URL Website",
+        input2: "Name",
+        input3: "Email",
+        input4: "Phone",
+        button: "Send diagnostic"
       },
       footer: {
         text1:
           "Calle Montes Urales 424, Lomas - Virreyes, Lomas de Chapultepec V Secc., 11000 Ciudad de México, CDMX",
         title2: "Company",
-        li2: ["Blog", "FAQS", "Free test", "SOS Assistance"],
+        li2: ["Blog", "FAQS", "Quote", "Free test", "SOS Assistance"],
         title3: "Offices",
         li3: ["Bangalore", "Brisbane", "Hyderabad", "Hong kong"],
         title4: "Contact",
@@ -386,7 +420,8 @@ const languageConfig = {
         text5: [
           "Delta Protect ® 2019 | Delta Exponential Technologies SA de CV",
           "Notice of Privacy"
-        ]
+        ],
+        link5: "https://www.deltaprotect.co/en/privacy"
       }
     },
     evaluations: {
@@ -395,13 +430,34 @@ const languageConfig = {
       text1:
         "We go much further than a vulnerability scan. Our White Hat hackers aim to understand the critical points of our business., get into the most vulnerable and deep corners of our customers, managing to protect their day-to-day operations.",
       li: [
-        "API´s Security",
-        "Mobile App Security",
-        "Web App Security",
-        "Cloud Security",
-        "Code Review DAST & SAST",
-        "Server Hardening",
-        "Network Security"
+        {
+          text1: "API´s Security",
+          span1: ""
+        },
+        {
+          text1: "Mobile App Security",
+          span1: ""
+        },
+        {
+          text1: "Web App Security",
+          span1: ""
+        },
+        {
+          text1: "Cloud Security",
+          span1: ""
+        },
+        {
+          text1: "Code Review DAST & SAST",
+          span1: ""
+        },
+        {
+          text1: "Server Hardening",
+          span1: ""
+        },
+        {
+          text1: "Network Security",
+          span1: ""
+        }
       ]
     },
     monitoring: {
@@ -444,7 +500,9 @@ const languageConfig = {
         "Email",
         "Cell Phone",
         "Domain",
-        "Description of the CyberAttack"
+        "Description of the CyberAttack",
+        "Compromised system",
+        "Type of atack "
       ],
       button: "Assistance"
     },

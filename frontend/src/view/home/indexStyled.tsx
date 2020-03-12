@@ -13,6 +13,11 @@ export const TextHeader = styled.div`
       margin-bottom: 30px;
     }
     @media ${MQ.md} {
+      font-size: 45px;
+      margin-top: 0;
+      margin-bottom: 11px;
+    }
+    @media ${MQ.lg} {
       font-size: 55px;
       margin-top: 0;
       margin-bottom: 11px;
@@ -26,6 +31,9 @@ export const TextHeader = styled.div`
       font-size: 25px;
     }
     @media ${MQ.md} {
+      font-size: 15px;
+    }
+    @media ${MQ.lg} {
       font-size: 20px;
     }
   }

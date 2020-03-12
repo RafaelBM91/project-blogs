@@ -19,7 +19,8 @@ const NavSC = styled.div`
 `;
 const ImgNav = styled.img`
   cursor: pointer;
-  transition: transform 0.2s;
+  height: 50px;
+  transition: transform 0.3s;
   &:hover {
     transform: scale(1.03);
   }

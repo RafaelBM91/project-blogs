@@ -14,6 +14,8 @@ import Blog from "../view/blog";
 import FreeDiagnostic from "../view/freeDiagnostic";
 import SOSAssistance from "../view/sosAssistance";
 import About from "../view/about";
+import TermsAndConditions from "../view/termsAndConditions";
+import Quote from "../view/quote";
 
 //Image
 import img1 from "../view/img/General/image.jpg";
@@ -68,6 +70,9 @@ const RoutesApp: React.SFC<RoutesProps> = () => {
         <Route exact path="/free-diagnostic" component={FreeDiagnostic} />
         <Route exact path="/sos-assistance" component={SOSAssistance} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/privacy" component={TermsAndConditions} />
+        <Route exact path="/quote" component={Quote} />
+        Quote
       </Switch>
     </Routes>
   );

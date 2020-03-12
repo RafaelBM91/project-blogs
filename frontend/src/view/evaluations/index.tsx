@@ -36,7 +36,10 @@ const Evaluations: React.SFC<EvaluationsProps> = () => {
                 {evaluations.li.map((d: any, i: number) => (
                   <li key={i}>
                     <IconV />
-                    {d}
+                    <span>
+                      {d.text1}
+                      <strong>{d.span1}</strong>
+                    </span>
                   </li>
                 ))}
               </UlContainer>

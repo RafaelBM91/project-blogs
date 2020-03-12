@@ -27,14 +27,14 @@ const ContainerInput = styled.div`
       props.focus &&
       css`
         color: #2a93f0;
-        transform: translateY(-130%) scale(0.6);
+        transform: translateY(-100%) scale(0.6);
       `}
       @media ${MQ.md} {
         ${props =>
           props.focus &&
           css`
             color: #2a93f0;
-            transform: translateY(-160%) scale(0.8);
+            transform: translateY(-100%) scale(0.7);
           `}
       }
   }
@@ -90,11 +90,12 @@ function InputTextAreaContainer2({
   }
   return (
     <ContainerInput focus={focus}>
-      <label htmlFor={placeholder + "idLabel"}>{placeholder || ""}</label>
+      {/* <label htmlFor={placeholder + "idLabel"}>{placeholder || ""}</label> */}
       <InputContainerSC
         color={color}
         borderColor={borderColor}
         // type={mytype || "text"}
+        placeholder={placeholder}
         onFocus={() => setFocus(true)}
         onBlur={() => handleOnBlur()}
         id={placeholder + "idLabel"}

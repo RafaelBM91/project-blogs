@@ -7,12 +7,7 @@ import ContainerML from "../layout/container";
 
 const ContainerBlog = styled.article`
   font-size: 16px;
-  @media ${MQ.sm} {
-    font-size: 24px;
-  }
-  @media ${MQ.md} {
-    font-size: 32px;
-  }
+
   img {
     width: 100%;
     margin: 1em 0;
@@ -22,6 +17,9 @@ const ContainerBlog = styled.article`
     @media ${MQ.md} {
       width: 50%;
     }
+  }
+  h1 {
+    font-size: 2.5em;
   }
 `;
 

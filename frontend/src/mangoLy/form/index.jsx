@@ -4,6 +4,7 @@ import { MQ } from "../../config/media";
 //Mango-Library
 import InputContainer1 from "./input";
 import InputContainer2 from "./input2";
+import InputContainer3 from "./input3";
 import InputTextAreaContainer2 from "./inputTextArea2";
 import FormContainer1 from "./FormContainer1";
 const FormSC = styled.form`
@@ -17,7 +18,11 @@ const FormSC = styled.form`
   width: 100%;
   @media ${MQ.sm} {
     width: ${props => props.width};
-    padding: 3em;
+    padding: 3em 10em;
+  }
+  p {
+    width: 100%;
+    text-align: left;
   }
 `;
 
@@ -31,5 +36,6 @@ function Form({ children, width, onSubmit }) {
 Form.Container = FormContainer1;
 Form.Input1 = InputContainer1;
 Form.Input2 = InputContainer2;
+Form.Input3 = InputContainer3;
 Form.TextArea2 = InputTextAreaContainer2;
 export default Form;

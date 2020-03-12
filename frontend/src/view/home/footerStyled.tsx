@@ -128,8 +128,15 @@ export const Text4 = styled.div`
     text-align: left;
     font-size: 12px;
   }
-  h4 {
+  h4,
+  a {
     margin: 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    @media ${MQ.md} {
+      font-size: 12px;
+    }
   }
   h4:nth-child(2) {
     @media ${MQ.md} {

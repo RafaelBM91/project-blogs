@@ -46,11 +46,12 @@ const FooterComponent: React.SFC<FooterComponentProps> = props => {
               <li>
                 <a href="#FAQS">{myFooter.li2[1]}</a>
               </li>
+              <li onClick={() => historyPush("/quote")}>{myFooter.li2[2]}</li>
               <li onClick={() => historyPush("/free-diagnostic")}>
-                {myFooter.li2[2]}
+                {myFooter.li2[3]}
               </li>
               <li onClick={() => historyPush("/sos-assistance")}>
-                {myFooter.li2[3]}
+                {myFooter.li2[4]}
               </li>
             </ul>
           </div>
@@ -92,11 +93,11 @@ const FooterComponent: React.SFC<FooterComponentProps> = props => {
                 <div>
                   <h5>{myFooter.li4[0]}</h5>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5215551876769&text=Think%20I%20had%20been%20hacked&source=&data="
+                    href="https://api.whatsapp.com/send?phone=525551876769&text=Think%20I%20had%20been%20hacked&source=&data="
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <h2>+52 1 55 5187-6769</h2>
+                    <h2>+52 (55) 5187-6769</h2>
                   </a>
                 </div>
               </li>
@@ -104,7 +105,7 @@ const FooterComponent: React.SFC<FooterComponentProps> = props => {
                 <img src={email} alt="icon" />
                 <div>
                   <h5>{myFooter.li4[1]}</h5>
-                  <h2>Contact@deltaprotect.com</h2>
+                  <h2>contact@deltaprotect.com</h2>
                 </div>
               </li>
               <li>
@@ -132,7 +133,7 @@ const FooterComponent: React.SFC<FooterComponentProps> = props => {
       <FooterML.span12>
         <Text4>
           <h4>{myFooter.text5[0]}</h4>
-          <h4>{myFooter.text5[1]}</h4>
+          <h4 onClick={() => historyPush("/privacy")}>{myFooter.text5[1]}</h4>
         </Text4>
       </FooterML.span12>
     </FooterML>

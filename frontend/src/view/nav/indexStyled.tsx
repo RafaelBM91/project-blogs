@@ -32,13 +32,16 @@ export const ContainerButtonsNav = styled.ul`
   padding: 0;
   list-style: none;
   li {
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 1);
     margin-left: 30px;
     display: flex;
     align-items: center;
     position: relative;
     cursor: pointer;
+    @media ${MQ.lg} {
+      font-size: 18px;
+    }
   }
 `;
 export const ContainerDropDown = styled.li`
@@ -48,8 +51,9 @@ export const ContainerDropDown = styled.li`
     margin-left: 15px;
   }
   ul {
-    transform: scaleY(0);
-    transition: transform 0.3s;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.1s;
     transform-origin: top center;
     position: absolute;
     top: 110%;
@@ -59,7 +63,8 @@ export const ContainerDropDown = styled.li`
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   }
   &:hover ul {
-    transform: scaleY(1);
+    opacity: 1;
+    transform: scale(1);
   }
 `;
 // export const ContainerIndustries = styled.ul`
@@ -199,17 +204,21 @@ export const ButtonNav = styled.div`
     font-weight: bold;
     border: none;
     outline: none;
-    padding: 10px 35px;
+    padding: 0px 35px;
     /* width: 180px; */
     display: flex;
     align-items: center;
-    height: 44px;
+    height: 37px;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: transform 0.2s;
     &:hover {
       transform: scale(1.03);
+    }
+    @media ${MQ.lg} {
+      font-size: 18px;
+      height: 44px;
     }
   }
 `;
@@ -225,10 +234,10 @@ export const ContainerImgNav = styled.div`
 export const ContainerImgMobile = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   img {
-    margin: 30px 0px 30px 30px;
+    margin: 30px;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -243,5 +252,13 @@ export const ImgContainer = styled.div`
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
+  }
+`;
+export const ContainerButtonsMobile = styled.div`
+  width: 100%;
+  & > div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 `;

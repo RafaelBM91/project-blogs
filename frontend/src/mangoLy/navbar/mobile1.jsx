@@ -32,12 +32,13 @@ const ContainerModal = styled.div`
   transition: left 0.3s;
 `;
 const ContainerModalNan = styled.div`
-  background: white;
+  background: #2c3e50;
   height: auto;
   width: 250px;
   height: 100vh;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow-y: scroll;
 `;
 const OtherDiv = styled.div`
   height: 100vh;
@@ -51,9 +52,9 @@ const UlMobileNav = styled.ul`
   li {
     width: 100%;
     padding: 20px 0px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     @media ${MQ.md} {
       font-size: 18px;
@@ -99,11 +100,17 @@ const Mobile1 = props => {
       <ContainerModal viewModalNav={viewModalNav}>
         <ContainerModalNan>
           <UlMobileNav>
-            {data.map((dato, i) => (
-              <li key={i} onClick={() => historyPush(dato.url)}>
-                {dato.text}
-              </li>
-            ))}
+            {data.map((dato, i) =>
+              dato.other ? (
+                <li key={i} onClick={() => window.open(dato.url)}>
+                  {dato.text}
+                </li>
+              ) : (
+                <li key={i} onClick={() => historyPush(dato.url)}>
+                  {dato.text}
+                </li>
+              )
+            )}
           </UlMobileNav>
           {children}
         </ContainerModalNan>

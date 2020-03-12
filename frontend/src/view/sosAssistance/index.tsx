@@ -24,6 +24,8 @@ interface iInitialValue {
   value4: string;
   value5: string;
   value6: string;
+  value7: string;
+  value8: string;
 }
 const SOSAssistance: React.SFC<SOSAssistanceProps> = () => {
   const { languageConfig, language } = React.useContext(LanguageContext);
@@ -36,7 +38,9 @@ const SOSAssistance: React.SFC<SOSAssistanceProps> = () => {
     value3: "",
     value4: "",
     value5: "",
-    value6: ""
+    value6: "",
+    value7: "",
+    value8: ""
   };
   const [valueForm, setValueForm] = React.useState(initialValue);
   const [addTodo, { data }] = useMutation(CREATE_EMERGENCI);
@@ -51,7 +55,9 @@ const SOSAssistance: React.SFC<SOSAssistanceProps> = () => {
             email: valueForm.value3,
             phone: valueForm.value4,
             company: valueForm.value2,
-            description: valueForm.value6
+            description: valueForm.value6,
+            typeofatack: valueForm.value7,
+            compromisedsystem: valueForm.value8
           }
         }
       }
@@ -153,7 +159,28 @@ const SOSAssistance: React.SFC<SOSAssistanceProps> = () => {
                   name="value6"
                   setValue={setValueForm}
                 />
-
+                <FormML.TextArea2
+                  color="#2C3E50"
+                  borderColor="#2A93F0"
+                  placeholder={sosAssistance.input[6]}
+                  // mytype=""
+                  required={true}
+                  initialValue={initialValue}
+                  value={valueForm}
+                  name="value7"
+                  setValue={setValueForm}
+                />
+                <FormML.TextArea2
+                  color="#2C3E50"
+                  borderColor="#2A93F0"
+                  placeholder={sosAssistance.input[7]}
+                  // mytype=""
+                  required={true}
+                  initialValue={initialValue}
+                  value={valueForm}
+                  name="value8"
+                  setValue={setValueForm}
+                />
                 <InputSubmit type="submit" value={sosAssistance.button} />
               </>
             )}

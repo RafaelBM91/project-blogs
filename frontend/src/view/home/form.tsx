@@ -21,7 +21,7 @@ import img1 from "../img/home/formImg1.png";
 import img2 from "../img/home/formImg2.png";
 import img3 from "../img/home/formImg3.png";
 import img4 from "../img/home/formImg4.png";
-import img5 from "../img/home/formImg5.png";
+import img5 from "../img/home/formImg8.jpg";
 import check from "../img/home/formCheck.svg";
 export interface FormComponentProps {}
 interface iInitialValue {
@@ -73,8 +73,7 @@ const FormComponent: React.SFC<FormComponentProps> = () => {
           <img src={img2} alt="" />
           <img src={img3} alt="" />
           <img src={img4} alt="" />
-          {/* <img src={img4} alt="" />
-          <img src={img5} alt="" /> */}
+          <img src={img5} alt="" />
         </div>
       </HomeSectionTitle>
     ) : null;

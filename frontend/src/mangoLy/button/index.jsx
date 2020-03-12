@@ -13,18 +13,18 @@ const ButtonSC = styled.button`
     border: 3px solid ${props => props.color};
     cursor: pointer;
     font-weight: 600;
-    padding: 10px 35px; 
+    padding: 0px 35px; 
     box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
     border-radius: ${props => (props.curvature ? "50px" : "6px")};
     width: ${props => props.width};
-    /* height: 36px; */
+    height: 42px;
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform .2s;
     @media ${MQ.md} {
-      height: 44px;
+      height: 37px;
     }
     &:hover {
         transform: scale(1.03);

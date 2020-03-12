@@ -34,6 +34,8 @@ const ContainerParticles = styled.div`
     height: 100%;
     canvas {
       width: auto;
+      position: fixed;
+      top: 0;
       height: 100%;
       z-index: -5;
     }
