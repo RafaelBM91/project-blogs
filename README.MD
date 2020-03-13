@@ -13,7 +13,7 @@
 
 - environments local mode *development*:
 
-```shell
+```properties
     NODE_ENV=development
 
     DATABASE_CLIENT=postgres
@@ -41,7 +41,7 @@
 
 - environments local mode *production*:
 
-```shell
+```properties
     NODE_ENV=development
 
     DATABASE_CLIENT=[value_for_production]
@@ -63,19 +63,19 @@
     GRAPHQL_URL=http://strapi:1337/graphql
 ```
 
-### Note:
-    these variable should not change:
-    - GRAPHQL_URL=http://strapi:1337/graphql
-    - PORT_FRONT_EXPOSE=80
-    - PORT_ADMIN_EXPOSE=8080
-
+**NOTE:** &nbsp;&nbsp; these variable should not change:
+```properties
+- GRAPHQL_URL=http://strapi:1337/graphql
+- PORT_FRONT_EXPOSE=80
+- PORT_ADMIN_EXPOSE=8080
+```
 ## 3) Run commands line (Mode Production)
 
-```sh
+```properties
 make build
 ```
 
-```sh
+```properties
 make up
 ```
 
@@ -83,13 +83,36 @@ make up
 
 - Go to *Plugins* -> *File Upload*
 
-![](https://miro.medium.com/max/700/1*L8kZCTP1abEbXFwF3LbSeA.png)
+![](https://github.com/WulperStudio/delta-project/blob/master/doc/images/strapi1.png)
 
 - Select the option *"Amazom Web Service S3"*
 
-![](https://miro.medium.com/max/700/1*qaSS_iSnC-wG5ZlSCIEFpw.png)
+![](https://github.com/WulperStudio/delta-project/blob/master/doc/images/strapi2.png)
 
 - Complete the fields required and after do click to Save
 
-![](https://miro.medium.com/max/700/1*Yf2vod4cOE4f_2exqX3uFw.png)
+![](https://github.com/WulperStudio/delta-project/blob/master/doc/images/strapi3.png)
 
+
+# Configure Jenkins for Deploy or any jobs (Optional)
+
+```properties
+make up-jk
+```
+
+Optional example for pipeline:
+
+```properties
+pipeline {
+    agent any
+    stages {
+        stage('Deploy & ReStart') {
+            steps {
+                sh "docker restart docker_front_1"
+                sh "docker restart docker_admin_1"
+                sh "docker restart docker_nginx_1"
+            }
+        }
+    }
+}
+```
