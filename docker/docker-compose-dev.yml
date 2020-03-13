@@ -14,7 +14,7 @@ services:
     networks:
     - blogs
     env_file:
-    - .env
+    - ../.env
 
   front:
     image: node:latest
@@ -31,7 +31,7 @@ services:
     networks:
     - blogs
     env_file:
-    - .env
+    - ../.env
 
   database:
     image: postgres:latest
@@ -42,44 +42,24 @@ services:
     networks:
     - blogs
     env_file:
-    - .env
+    - ../.env
 
   nginx:
     image: nginx:latest
     depends_on:
     - front
-    - jenkins
     volumes:
-    - ../nginx/nginx.conf:/etc/nginx/nginx.conf
+    - ../nginx.conf:/etc/nginx/nginx.conf
     ports:
     - ${PORT_FRONT}
     - ${PORT_ADMIN}
-    - ${PORT_JENKINS}
     expose:
     - ${PORT_FRONT_EXPOSE}
     - ${PORT_ADMIN_EXPOSE}
-    - ${PORT_JENKINS_EXPOSE}
     networks:
     - blogs
     env_file:
-    - .env
-
-  jenkins:
-    image: jenkinsci/blueocean:1.17.0
-    user: root
-    volumes:
-    - ../:/deploy/admin
-    - ../jenkins_home:/var/jenkins_home
-    - /var/run/docker.sock:/var/run/docker.sock
-    working_dir: /jenkins
-    ports:
-    - "8393:8080"
-    expose:
-    - "8080"
-    networks:
-    - blogs
-    env_file:
-    - .env
+    - ../.env
 
 networks:
   blogs:

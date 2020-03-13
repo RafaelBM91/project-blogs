@@ -1,19 +1,14 @@
-build-dev:
-	@echo '***BUILD-DEV***'
+build-dev: dependencies ## Image Constructor ~ Mode Development
 	docker-compose -f ${PWD}/docker/docker-compose-dev.yml build --force-rm --no-cache
 
-up-it-dev:
-	@echo '***UP-IT-DEV***'
+up-dev: ## Start Container (No Daemon) ~ Mode Development
 	docker-compose -f ${PWD}/docker/docker-compose-dev.yml up --no-build --force-recreate
 
-restart-dev:
-	@echo '***RESTART-DEV***'
+restart-dev: ## ReStart Container ~ Mode Development
 	docker-compose -f ${PWD}/docker/docker-compose.yml restart
 
-down-dev:
-	@echo '***DOWN***'
+down-dev: ## Down Container ~ Mode Development
 	docker-compose -f ${PWD}/docker/docker-compose-dev.yml down
 
-logs-dev:
-	@echo '***LOGS-DEV***'
+logs-dev: ## Show Container's Logs ~ Mode Development
 	docker-compose -f ${PWD}/docker/docker-compose-dev.yml logs
