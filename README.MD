@@ -5,6 +5,14 @@
     3) Install Docker-Compose
     4) Install Make
 
+# Show all make's (Makefile) targets
+
+run command:
+
+```properties
+    make
+```
+
 # Steps for Deploy
 
 ## 1) Clone the Project
