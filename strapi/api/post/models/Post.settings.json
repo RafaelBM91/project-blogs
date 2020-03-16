@@ -28,14 +28,25 @@
       "plugin": "upload",
       "required": true
     },
-    "tags": {
-      "required": true,
-      "type": "json"
-    },
-    "description": {
-      "maxLength": 5000,
+    "article": {
       "required": true,
       "type": "richtext"
+    },
+    "url": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    },
+    "keywords": {
+      "required": true,
+      "type": "text"
+    },
+    "public": {
+      "type": "boolean"
     }
   }
 }
