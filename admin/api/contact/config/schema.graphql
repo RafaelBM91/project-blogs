@@ -1,0 +1,17 @@
+module.exports = {
+  resolver: {
+    Query: {
+    },
+    Mutation: {
+      createContact: {
+        description: 'create contact graphql',
+        resolver: {
+          handler: 'Contact.create'
+        },
+        policies: [
+          'global.isAuthenticated'
+        ]
+      }
+    }
+  }
+};

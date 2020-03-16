@@ -5,7 +5,7 @@
       "path": "/posts",
       "handler": "Post.find",
       "config": {
-        "policies": []
+        "policies": ["global.isAuthenticated"]
       }
     },
     {

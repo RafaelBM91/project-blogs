@@ -1,19 +1,24 @@
 module.exports = {
-  definition: ``,
-  query: `
-    postByUrl(url: String!): Post
-  `,
-  mutation: ``,
   resolver: {
     Query: {
-      postByUrl: {
-        description: 'Find by Url String unique',
+      posts: {
+        description: 'posts graphql',
         resolver: {
-          handler: 'Post.findUrl'
+          handler: 'Post.find'
         },
-        policies: []
+        policies: [
+          'global.isAuthenticated'
+        ]
       },
-    },
-    Mutation: {}
+      post: {
+        description: 'post graphql',
+        resolver: {
+          handler: 'Post.findOne'
+        },
+        policies: [
+          'global.isAuthenticated'
+        ]
+      }
+    }
   }
 };

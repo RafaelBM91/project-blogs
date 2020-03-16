@@ -1,17 +1,21 @@
 'use strict';
 
-// const { convertRestQueryParams } = require('strapi-utils');
-
-/**
- * Read the documentation (https://strapi.io/documentation/3.0.0-beta.x/guides/services.html#core-services)
- * to customize this service
- */
-
 module.exports = {
-  findUrl(params) {
-    return strapi.query('post').findOne({
-      url:    params.url || params._url,
-      public: true
-    });
+
+  fetchAll: (params) => {
+    const convertedParams = strapi.utils.models.convertParams('post', params);
+    return Post
+      .find()
+      // .where(convertedParams.where)
+      // .sort(convertedParams.sort)
+      // .skip(convertedParams.start)
+      .limit(convertedParams.limit)
+      // .populate(_.keys(_.groupBy(_.reject(strapi.models.post.associations, {autoPopulate: false}), 'alias')).join(' '));
+  },
+
+  fetchOne: (params) => {
+    return Post
+      .findOne({ '_id': params.id });
   }
+
 };

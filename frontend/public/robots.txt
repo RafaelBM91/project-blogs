@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
 User-agent: *
-Sitemap: https://www.deltaprotect.co/sitemap.xml
+Allow: /https://wulperstudio.com
+Allow: /https://wulperstudio.com/blog
+
+
+Sitemap: http://example.com/sitemap.xml

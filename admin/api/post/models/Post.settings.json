@@ -3,70 +3,50 @@
   "collectionName": "post",
   "info": {
     "name": "post",
-    "description": "blog content"
+    "description": "model.description.missing"
   },
   "options": {
-    "increments": true,
     "timestamps": [
-      "created_at",
-      "updated_at"
-    ],
-    "comment": ""
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "title": {
+      "maxLength": 100,
       "required": true,
       "type": "string"
     },
-    "titulo": {
-      "required": true,
-      "type": "string"
+    "user": {
+      "unique": true,
+      "model": "user",
+      "plugin": "users-permissions"
     },
     "image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "plugin": "upload",
-      "required": true
-    },
-    "public": {
-      "type": "boolean"
-    },
-    "url": {
-      "unique": true,
-      "required": true,
-      "type": "string"
-    },
-    "keywords": {
-      "type": "text"
-    },
-    "palabrasclaves": {
-      "type": "text"
-    },
-    "description": {
-      "required": true,
-      "type": "text"
-    },
-    "descripcion": {
-      "type": "text",
       "required": true
     },
     "article": {
       "required": true,
       "type": "richtext"
     },
-    "articulo": {
+    "url": {
       "required": true,
-      "type": "richtext"
-    },
-    "tages": {
-      "default": "tag",
-      "required": true,
+      "unique": true,
       "type": "string"
     },
-    "tagen": {
+    "description": {
       "required": true,
-      "default": "tagen",
-      "type": "string"
+      "type": "text"
+    },
+    "keywords": {
+      "required": true,
+      "type": "text"
+    },
+    "public": {
+      "type": "boolean"
     }
   }
 }

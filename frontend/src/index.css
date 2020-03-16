@@ -1,21 +1,8 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
 body {
   margin: 0;
-  background: #fafafa;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-/* @media (min-width: 799px) {
-  body {
-    zoom: 80%;
-  }
-} */
-
-* {
-  font-family: "PT Sans", sans-serif;
+  width: 100%;
 }
 
-input[type="submit"],
-button {
-  -webkit-appearance: none;
-  /* -webkit-border-radius: 0; */
-}

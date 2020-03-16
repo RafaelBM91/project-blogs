@@ -1,12 +1,15 @@
 'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/3.0.0-beta.x/guides/controllers.html#core-controllers)
- * to customize this controller
- */
-
 module.exports = {
-  findUrl: async (ctx) => {
-    return await strapi.services.post.findUrl(ctx.params);
+
+  find: async (ctx) => {
+    let values = strapi.services.post.fetchAll(ctx.query);
+    return values;
   },
+
+  findOne: async (ctx) => {
+    let values = strapi.services.post.fetchOne(ctx.query);
+    return values;
+  }
+
 };
