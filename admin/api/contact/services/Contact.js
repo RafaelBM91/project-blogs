@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  add: async (params) => {
-    let value = await Contact.create(params);
+  create: (params) => {
+    let value = strapi.query('contact').create(params);
     return value;
   }
 };
