@@ -4,18 +4,23 @@ module.exports = {
 
   fetchAll: (params) => {
     const convertedParams = strapi.utils.models.convertParams('post', params);
-    return Post
-      .find()
+    return strapi.query('post').find()
       // .where(convertedParams.where)
       // .sort(convertedParams.sort)
       // .skip(convertedParams.start)
-      .limit(convertedParams.limit)
-      // .populate(_.keys(_.groupBy(_.reject(strapi.models.post.associations, {autoPopulate: false}), 'alias')).join(' '));
+      .limit(convertedParams.limit);
+    // .populate(_.keys(_.groupBy(_.reject(strapi.models.post.associations, {autoPopulate: false}), 'alias')).join(' '));
   },
 
   fetchOne: (params) => {
-    return Post
-      .findOne({ '_id': params.id });
-  }
+    return strapi.query('post').findOne({ 'id': params.id });
+  },
+
+  fetchByUrl: (params) => {
+    return strapi.query('post').findOne({
+      url:    params.url || params._url,
+      public: true
+    });
+  },
 
 };

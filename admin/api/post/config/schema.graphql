@@ -1,4 +1,9 @@
 module.exports = {
+  definition: ``,
+  query: `
+    postByUrl(url: String!): Post
+  `,
+  mutation: ``,
   resolver: {
     Query: {
       posts: {
@@ -13,12 +18,21 @@ module.exports = {
       post: {
         description: 'post graphql',
         resolver: {
-          handler: 'Post.findOne'
+          handler: 'Post.findByUrl'
         },
         policies: [
           'global.isAuthenticated'
         ]
-      }
+      },
+      postByUrl: {
+        description: 'post by url graphql',
+        resolver: {
+          handler: 'Post.findByUrl'
+        },
+        policies: [
+          'global.isAuthenticated'
+        ]
+      },
     }
   }
 };
